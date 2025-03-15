@@ -10,10 +10,10 @@ const Text = ({ ref4 }) => {
                 {
                     aboutMe.split(" ").map((word, index) => {
                         const { scrollYProgress } = useScroll({ target: ref4, offset: ["0% 0%", "100% 100%"] });
-                        const wordOpacity = useTransform(scrollYProgress, [index * 0.016, (index + 1) * 0.016], [0, 1])
+                        const WordOpacity = (index) => useTransform(scrollYProgress, [index * 0.016, (index + 1) * 0.016], [0, 1])
                         return (
                             <motion.h1
-                                style={{ opacity: wordOpacity }}
+                                style={{ opacity: WordOpacity(index) }}
                                 key={index}>
                                 {word}
                             </motion.h1>
