@@ -10,7 +10,7 @@ const Images = ({ ref4 }) => {
     return (
         <>
             {data.map(({ id, src, susu }, index) => {
-                const { scrollYProgress } = useScroll({ target: ref4, offset: [`${index * 3}% ${index * 3}%`, "300% 300%"] });
+                const { scrollYProgress } = useScroll({ target: ref4, offset: [`${(index + 1) * 3}% ${(index + 1) * 3}%`, "300% 300%"] });
                 const Scale = (start, end) => useTransform(scrollYProgress, [0, 1], [start, end]);
                 return (
                     <motion.div key={id} className="test" style={{ scale: Scale(0, 20) }}>
