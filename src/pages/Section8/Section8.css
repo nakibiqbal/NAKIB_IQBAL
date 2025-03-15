@@ -1,0 +1,139 @@
+.section8 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img.ab {
+  width: 38vh;
+  height: 50vh;
+  object-fit: cover;
+}
+img.ab:nth-child(1) {
+  width: 22vh;
+  height: 25vh;
+  object-fit: cover;
+  z-index: 9;
+  margin-right: -2rem;
+  margin-top: 5rem;
+}
+img.ab:nth-child(3) {
+  width: 24vh;
+  object-fit: cover;
+  margin-left: -3rem;
+  z-index: 9;
+  margin-top: 2rem;
+  height: 32vh;
+}
+
+img.bc:nth-child(1) {
+  width: 22vh;
+  height: 30vh;
+  object-fit: cover;
+  margin-right: 10px;
+}
+img.bc:nth-child(2) {
+  width: 26vh;
+  height: 36vh;
+  object-fit: cover;
+  margin-left: 10px;
+}
+.textParallax span {
+  font-size: 56px;
+  font-family: "Pixel Sans Serif";
+  font-weight: 100;
+  position: relative;
+}
+.textParallax {
+  width: 28rem;
+}
+.me {
+  width: 28rem;
+}
+.ran {
+  width: 40rem;
+}
+
+@media (max-width: 1568px) {
+  .section8 {
+    height: 115vh;
+  }
+  .me,
+  .ran {
+    height: 33rem;
+  }
+}
+@media (max-width: 928px) {
+  .section8 {
+    height: 150vh;
+  }
+  .container {
+    justify-content: center;
+  }
+  .me,
+  .textParallax {
+    width: 26rem;
+  }
+  .ran {
+    width: 36rem;
+  }
+  img.bc:nth-child(2) {
+    z-index: 9;
+    mix-blend-mode: difference;
+  }
+  img.ab:nth-child(3) {
+    mix-blend-mode: difference;
+  }
+}
+@media (max-width: 600px) {
+  .section8 {
+    height: 160vh;
+    overflow: hidden;
+  }
+  .me,
+  .textParallax,
+  .ran {
+    width: 100%;
+  }
+  .textParallax span {
+    font-size: 13vw;
+  }
+  img.bc:nth-child(1) {
+    width: 18vh;
+    height: 24vh;
+  }
+  img.bc:nth-child(2) {
+    width: 18vh;
+    height: 28vh;
+  }
+  img.ab:nth-child(1) {
+    width: 18vh;
+    height: 22vh;
+    margin-right: -5rem;
+  }
+  img.ab {
+    width: 24vh;
+    height: 38vh;
+  }
+  img.ab:nth-child(3) {
+    width: 18vh;
+    height: 26vh;
+    margin-left: -7rem;
+  }
+}

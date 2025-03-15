@@ -1,0 +1,30 @@
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textBGwrapper {
+  display: flex;
+  overflow: hidden;
+}
+.textBGwrapper h1 {
+  color: blue;
+  font-size: 9vw;
+  width: 265vw;
+  animation: animate 20s linear infinite;
+  font-weight: 100;
+  font-family: "Blockstepped";
+}
+@keyframes animate {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.span {
+  color: white;
+  font-family: "Super Commando 3D";
+}

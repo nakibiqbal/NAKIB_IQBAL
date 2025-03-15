@@ -1,0 +1,46 @@
+.bg1 {
+  width: 30%;
+  height: 35rem;
+  position: absolute;
+  left: -20rem;
+  top: 15%;
+  filter: blur(7rem);
+  transform: translate(0, 0);
+  pointer-events: none;
+  background: conic-gradient(from 2.35rad, #c76000, rgba(7, 29, 228, 0.5));
+}
+.two {
+  background: conic-gradient(from 2.315rad, #01ae01b3, #001ae0a3);
+}
+.bg2 {
+  width: 23%;
+  height: 25rem;
+  position: absolute;
+  right: -12rem;
+  top: 60%;
+  filter: blur(7rem);
+  border-radius: 15rem;
+  transform: translate(0, 0);
+  pointer-events: none;
+  background: conic-gradient(rgb(0, 0, 0), rgba(7, 29, 228, 0.8));
+}
+.three {
+  background: conic-gradient(rgb(0, 0, 0), #01ae01b3);
+}
+@media (max-width: 1200px) {
+  .bg1 {
+    width: 20rem;
+    height: 25rem;
+    left: -10rem;
+    top: 14%;
+    filter: blur(5rem);
+    border-radius: 10px;
+  }
+  .bg2 {
+    width: 18rem;
+    height: 18rem;
+    right: -10rem;
+    top: 62%;
+    filter: blur(5rem);
+  }
+}

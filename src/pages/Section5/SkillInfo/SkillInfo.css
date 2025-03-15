@@ -1,0 +1,77 @@
+img.skillImage {
+  width: 4rem;
+  cursor: pointer;
+}
+.skillInfo {
+  position: absolute;
+  bottom: 150%;
+  left: -185%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: white;
+}
+
+.skillInfo::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  bottom: -5%;
+  left: 45%;
+  transform: rotate(45deg);
+  border-radius: 6px;
+}
+.skillInfo h3 {
+  font-size: 32px;
+  font-family: "Gruppo";
+  color: black;
+  font-weight: bolder;
+}
+.skillInfo p {
+  font-size: 38px;
+  color: black;
+  font-family: "Chathura";
+  line-height: 20px;
+}
+.skillInfo img {
+  width: 3rem;
+}
+@media (max-width: 1000px) {
+  .skillInfo {
+    bottom: 150%;
+    left: -130%;
+    width: 220px;
+    height: 320px;
+  }
+  .skillInfo::after {
+    content: none;
+  }
+  .skillInfo p {
+    font-size: 32px;
+  }
+  .skillInfo h3 {
+    font-size: 28px;
+  }
+  img.skillImage {
+    width: 3.5rem;
+  }
+}
+@media (max-width: 512px) {
+  .skillInfo {
+    bottom: 150%;
+    left: -147%;
+    width: 220px;
+    height: 320px;
+  }
+}

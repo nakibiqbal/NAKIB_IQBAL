@@ -1,0 +1,66 @@
+#section5 {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 9;
+}
+
+.skillContent {
+  width: 60rem;
+  height: 30rem;
+  z-index: 99999;
+  background: linear-gradient(215deg, #0000002b, #00000070, #ffffff29);
+  border-radius: 40px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.inner-shadow {
+  position: absolute;
+  width: 600px;
+  filter: blur(5rem);
+  height: 600px;
+  background: conic-gradient(
+    rgb(43 0 49 / 80%),
+    rgb(43 0 49 / 80%),
+    rgb(0 50 255 / 50%)
+  );
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+@media (max-width: 1000px) {
+  .skillContent {
+    width: 100%;
+    height: 25rem;
+    flex-wrap: wrap;
+    padding: 8rem 5rem;
+  }
+}
+@media (max-width: 512px) {
+  #section5 {
+    height: 900px;
+    justify-content: space-evenly;
+  }
+  .skillContent {
+    height: 60%;
+    padding: 6rem 6rem;
+  }
+}
+@media (max-width: 368px) {
+  .skillContent {
+    padding: 6rem 4rem;
+  }
+}

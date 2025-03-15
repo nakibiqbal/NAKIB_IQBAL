@@ -1,0 +1,23 @@
+.headingText {
+  overflow: hidden;
+  width: 90%;
+  padding: 1rem;
+  text-align: left;
+}
+.headingText h1 {
+  font-family: "Gruppo";
+  font-size: 75px;
+}
+@media (max-width: 500px) {
+  .headingText {
+    padding: 0rem;
+  }
+  .headingText h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .headingText {
+    width: 100%;
+  }
+}

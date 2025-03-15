@@ -1,0 +1,65 @@
+@import url("https://fonts.cdnfonts.com/css/super-commando");
+
+section.sectionMy {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 9;
+  padding-bottom: 5rem;
+}
+.divForChild {
+  width: 100%;
+  height: 7vw;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+}
+.bigSpan {
+  display: flex;
+  font-size: 8vw;
+  line-height: 7vw;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Super Commando 3D", sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+.p p {
+  font-family: "Chathura", sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  font-weight: 600;
+  padding: 0rem 2rem;
+  font-size: 46px;
+  color: white;
+}
+@media (max-width: 500px) {
+  section.sectionMy {
+    align-items: center;
+  }
+  .divForChild {
+    height: 8vw;
+    padding: 0;
+    justify-content: center;
+  }
+  .bigSpan {
+    font-size: 9vw;
+    display: flex;
+    flex-direction: column;
+    line-height: 8vw;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .p p {
+    font-size: 26px;
+    text-align: center;
+  }
+}

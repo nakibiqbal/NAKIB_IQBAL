@@ -1,0 +1,115 @@
+.test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.stick4 {
+  width: 35vw;
+  height: 35vh;
+  position: relative;
+}
+.sec4Wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stick4.class1 {
+  top: -31vh;
+  left: -42vw;
+}
+.stick4.class2 {
+  top: -31vh;
+  right: -43vw;
+}
+
+.stick4.class3 {
+  top: 31vh;
+  left: 43vw;
+}
+
+.stick4.class4 {
+  top: 31vh;
+  left: -43vw;
+}
+
+.stick4.class5 {
+  left: -42vw;
+}
+.stick4.class6 {
+  top: -45vh;
+}
+.stick4.class7 {
+  left: 43vw;
+}
+.stick4.class8 {
+  top: 45vh;
+}
+.stick4.class9 {
+  left: -43vw;
+  top: -31vh;
+}
+.stick4.class10 {
+  top: -31vh;
+  left: 42vw;
+}
+.stick4.class11 {
+  top: 31vh;
+  left: 43vw;
+}
+.stick4.class12 {
+  top: 31vh;
+  left: -42vw;
+}
+.stick4.class13 {
+  left: -42vw;
+}
+.stick4.class14 {
+  top: -40vh;
+}
+.stick4.class15 {
+  left: 43vw;
+}
+.stick4.class16 {
+  top: 40vh;
+}
+.stick4.class17 {
+  top: -31vh;
+  left: -43vw;
+}
+.stick4.class18 {
+  top: -31vh;
+  left: 42vw;
+}
+.stick4.class19 {
+  top: 31vh;
+  left: 36vw;
+}
+
+.stick4.class20 {
+  top: 31vh;
+  left: -43vw;
+}
+.stick4.class21 {
+  left: -33vw;
+}
+.stick4.class22 {
+  top: -33vh;
+}
+.stick4.class23 {
+  left: 34vw;
+}
+.stick4.class24 {
+  top: 35vh;
+}
+
+@media (max-width: 500px) {
+  .stick4 {
+    width: 40vw;
+  }
+}

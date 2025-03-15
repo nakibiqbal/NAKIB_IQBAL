@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+#image_reveal {
+  width: 100%;
+  height: 1240px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 9;
+}
+.section3Content {
+  list-style: none;
+  width: 90%;
+  height: 50%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+  overflow: hidden;
+}
+.sec3Wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  border-bottom: 1px solid #ffffff4d;
+  color: white;
+}
+.hovered_img {
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 200ms ease-in-out;
+  pointer-events: none;
+  filter: brightness(0.8);
+}
+.sec3Wrapper button {
+  border: none;
+  background: transparent;
+}
+.sec3Wrapper button:hover {
+  background: blue;
+  color: black;
+  border-radius: 50rem;
+}
+.sec3Wrapper svg {
+  background: #7151ff26;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  color: white;
+  padding: 1rem;
+  border-radius: 5rem;
+}
+.items {
+  display: flex;
+  overflow: hidden;
+}
+.flipTextParent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.FlipTextChild {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+}
+.FlipTextChild h2 {
+  font-size: 48px;
+  font-family: "Gruppo";
+  line-height: 50px;
+}
+.dekhitoii {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+@media (max-width: 1200px) {
+  .section3Content {
+    width: 100%;
+  }
+  #image_reveal {
+    align-items: center;
+  }
+  .FlipTextChild {
+    height: 60px;
+  }
+  .FlipTextChild h2 {
+    line-height: 58px;
+  }
+}
+@media (max-width: 768px) {
+  .section3Content {
+    height: 60%;
+  }
+  .FlipTextChild {
+    height: 60px;
+  }
+  .sec3Wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    height: 10rem;
+  }
+  .sec3Wrapper svg {
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+  }
+  .FlipTextChild h2 {
+    font-size: 6vw;
+    line-height: 60px;
+  }
+}
+@media (max-width: 500px) {
+  #image_reveal {
+    padding: 3rem 1rem;
+    align-items: flex-start;
+    height: 935px;
+  }
+  .section3Content {
+    padding: 0;
+    gap: 0;
+  }
+  .flipTextParent {
+    gap: 5px;
+  }
+  .FlipTextChild {
+    height: 10vw;
+  }
+  .sec3Wrapper {
+    justify-content: space-evenly;
+    height: 7rem;
+  }
+  .sec3Wrapper svg {
+    width: 45px;
+    height: 45px;
+    padding: 0.5rem;
+  }
+  .hovered_img {
+    width: 200px;
+    height: 400px;
+  }
+  .FlipTextChild h2 {
+    font-size: 6.7vw;
+    line-height: 10vw;
+  }
+}
