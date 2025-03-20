@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(0 0 0 / 70%);
+  background: rgb(0 0 0 / 20%);
   padding: 0vw 15vw;
   mix-blend-mode: darken;
 }
@@ -17,7 +17,7 @@
   font-size: 3.35vw;
   font-weight: 600;
   font-family: "Quicksand";
-  text-transform: math-auto;
+  text-transform: none;
 }
 
 .mainTxt {

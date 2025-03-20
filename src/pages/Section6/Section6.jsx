@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Section6.css";
@@ -8,9 +7,8 @@ import HeadingText from "../../HeadingText_DY/HeadingText";
 gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
-  const [tilt, setTilt] = useState({});
-  const [shadowPos, setShadowPos] = useState({});
-  const [isHovered, setIsHovered] = useState({});
+  const [hoveredCardId, setHoveredCardId] = useState(null);
+  const [shadowPos, setShadowPos] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e, cardId) => {
     const cardElement = e.currentTarget;
@@ -22,41 +20,25 @@ const Section6 = () => {
     const x = e.clientX - left - centerX;
     const y = e.clientY - top - centerY;
 
-    // Calculate tilt based on distance from the center
+    // Calculate tilt
     const tiltX = (y / centerY) * 30;
     const tiltY = (x / centerX) * -30;
 
-    setTilt((prevTilt) => ({
-      ...prevTilt,
-      [cardId]: { x: tiltX, y: tiltY },
-    }));
+    cardElement.style.transform = `perspective(1000px) rotateY(${tiltY}deg) rotateX(${tiltX}deg)`
 
-    const shadowX = ((e.clientX - left) / width) * 100;
-    const shadowY = ((e.clientY - top) / height) * 100;
+    // Calculate cursor position relative to the card's center
+    const posX = e.clientX - left;
+    const posY = e.clientY - top;
 
-    setShadowPos((prevShadowPos) => ({
-      ...prevShadowPos,
-      [cardId]: {
-        x: `${Math.min(Math.max(shadowX, 5), 95)}%`,
-        y: `${Math.min(Math.max(shadowY, 5), 95)}%`,
-      },
-    }));
+    setShadowPos({ x: posX, y: posY });
+    setHoveredCardId(cardId);
+
   };
 
-  const handleMouseEnter = (cardId) => {
-    setIsHovered((prevHovered) => ({ ...prevHovered, [cardId]: true }));
-  };
-
-  const handleMouseLeave = (cardId) => {
-    setTilt((prevTilt) => ({
-      ...prevTilt,
-      [cardId]: { x: 0, y: 0 },
-    }));
-    setShadowPos((prevShadowPos) => ({
-      ...prevShadowPos,
-      [cardId]: { x: "50%", y: "50%" },
-    }));
-    setIsHovered((prevHovered) => ({ ...prevHovered, [cardId]: false }));
+  const handleMouseLeave = (e) => {
+    const cardElement = e.currentTarget;
+    cardElement.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`
+    setHoveredCardId(null);
   };
 
   const cardData = [
@@ -100,35 +82,43 @@ const Section6 = () => {
       {/* heading ends */}
       <div className="cardContainer">
         {cardData.map((card) => (
-          <motion.div
+
+          <div
             key={card.id}
             className="creative-tilt-card"
             onMouseMove={(e) => handleMouseMove(e, card.id)}
-            onMouseEnter={() => handleMouseEnter(card.id)}
-            onMouseLeave={() => handleMouseLeave(card.id)}
+            onMouseLeave={handleMouseLeave}
             style={{
-              transform: `perspective(1000px) rotateY(${tilt[card.id]?.y || 0
-                }deg) rotateX(${tilt[card.id]?.x || 0}deg)`,
               transition: "transform 0.5s ease-out",
             }}
           >
-            <div
-              className="dynamic-shadow"
-              style={{
-                left: shadowPos[card.id]?.x || "50%",
-                top: shadowPos[card.id]?.y || "50%",
-                opacity: isHovered[card.id] ? 1 : 0,
-                position: "fixed",
-                pointerEvents: "none",
-              }}
-            />
+            {/* Shadow attached to the cursor */}
+            {hoveredCardId === card.id && (
+              <span
+                style={{
+                  width: "9rem",
+                  height: "9rem",
+                  background: "white",
+                  position: "absolute",
+                  left: `${shadowPos.x}px`,
+                  top: `${shadowPos.y}px`,
+                  transform: "translate(-50%, -50%)",
+                  borderRadius: "50%",
+                  filter: "blur(7rem)",
+                  pointerEvents: "none",
+                  opacity: 1,
+                }}
+                className="shadow"
+              />
+            )}
             <div className="card-content">
-              <div className="icon">{card.svg}</div>
               <h2>{card.skill}</h2>
-              <p>{card.desc}</p>
+              {card.desc && <p>{card.desc}</p>}
             </div>
-          </motion.div>
+          </div>
+
         ))}
+
       </div>
     </section>
   );

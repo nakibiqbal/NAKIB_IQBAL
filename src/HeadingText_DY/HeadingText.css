@@ -5,15 +5,17 @@
   text-align: left;
 }
 .headingText h1 {
-  font-family: "Gruppo";
-  font-size: 75px;
+  font-family: "Pixel Sans Serif";
+  font-size: 48px;
+  font-weight: 100;
 }
+
 @media (max-width: 500px) {
   .headingText {
     padding: 0rem;
   }
   .headingText h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media (max-width: 768px) {

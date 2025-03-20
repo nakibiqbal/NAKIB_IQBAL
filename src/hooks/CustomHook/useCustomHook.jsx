@@ -9,39 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useState } from "react";
 
 const useCustomHook = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [shadowPos, setShadowPos] = useState({ x: "50%", y: "50%" });
   const [boxCount, setBoxCount] = useState(0);
   const [opacityS, setOpacityS] = useState("opacityS");
 
   useEffect(() => {
-    if (isHovered) {
-      gsap.to(".inner-shadow", {
-        left: shadowPos.x,
-        top: shadowPos.y,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-      });
-    } else {
-      gsap.to(".inner-shadow", {
-        opacity: 0,
-        duration: 2,
-        ease: "power2.out",
-      });
-    }
-    opacityFunction();
-    const updateBoxCount = () => {
-      const boxesAcross = Math.ceil(window.innerWidth / 100);
-      const boxesDown = Math.ceil(window.innerHeight / 100);
-      setBoxCount(boxesAcross * boxesDown);
-    };
-    updateBoxCount();
-    window.addEventListener("resize", updateBoxCount);
-    return () => window.removeEventListener("resize", updateBoxCount);
-  }, [isHovered, shadowPos]);
-
-  const opacityFunction = () => {
     setOpacityS(
       gsap.utils.toArray(`#${opacityS}`).forEach((opacity) => {
         gsap.to(opacity, {
@@ -55,20 +26,16 @@ const useCustomHook = () => {
         });
       })
     );
-  };
-  const handleMouseMove = (e) => {
-    const { left, top, width, height } =
-      e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - left) / width) * 100;
-    const y = ((e.clientY - top) / height) * 100;
-    setShadowPos({ x: `${x}%`, y: `${y}%` });
-  };
-  const hovered = () => {
-    setIsHovered(true);
-  };
-  const notHovered = () => {
-    setIsHovered(false);
-  };
+    const updateBoxCount = () => {
+      const boxesAcross = Math.ceil(window.innerWidth / 100);
+      const boxesDown = Math.ceil(window.innerHeight / 100);
+      setBoxCount(boxesAcross * boxesDown);
+    };
+    updateBoxCount();
+    window.addEventListener("resize", updateBoxCount);
+    return () => window.removeEventListener("resize", updateBoxCount);
+  }, []);
+
 
   const spring = {
     stiffness: 150,
@@ -86,10 +53,6 @@ const useCustomHook = () => {
     imagePos.y.set(clientY);
   };
   return {
-    handleMouseMove,
-    hovered,
-    notHovered,
-    shadowPos,
     boxCount,
     opacityS,
     handleMove,

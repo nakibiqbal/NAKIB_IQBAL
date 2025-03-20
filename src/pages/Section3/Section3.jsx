@@ -4,8 +4,6 @@ import { GoArrowUpRight } from "react-icons/go";
 
 import "./section3.css";
 import { Magnet } from "./Magnet";
-import Bg1 from "./BG/Bg1";
-import Bg2 from "./BG/Bg2";
 import HeadingText from "../../HeadingText_DY/HeadingText";
 import useCustomHook from "../../hooks/CustomHook/useCustomHook";
 import { ListData } from "./ListData";
@@ -77,7 +75,11 @@ function Section3() {
                           key={i}
                         >
                           <h2 style={{ color: "#ffffff94" }}>{l}</h2>
-                          <h2 style={{ color: "white" }}>{l}</h2>
+                          <h2 style={{
+                            color: "white",
+                            fontFamily: "Pixel Sans Serif",
+                            fontSize: "18px",
+                          }}>{l}</h2>
                         </motion.div>
                       );
                     })}
@@ -90,8 +92,6 @@ function Section3() {
             );
           })}
         </div>
-        <Bg1 />
-        <Bg2 />
       </section>
       <motion.img
         src={img.src}

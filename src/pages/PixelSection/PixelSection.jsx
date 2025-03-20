@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import "./PixelSection.css";
 import PixelContent from "./PixelContent";
 import useCustomHook from "../../hooks/CustomHook/useCustomHook";
@@ -15,6 +14,7 @@ const PixelSection = () => {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       {/* Hover grid */}
@@ -22,6 +22,8 @@ const PixelSection = () => {
         style={{
           display: "flex",
           flexWrap: "wrap",
+          width: "100vw",
+          height: "100vh",
           position: "absolute",
         }}
       >
