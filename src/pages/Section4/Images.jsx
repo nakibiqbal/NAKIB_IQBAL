@@ -9,15 +9,15 @@ export default function Images({ ref4 }) {
     return (
         <div className="parentImgDiv">
             <>
-                {data.map(({ id, src, susu }) => {
-                    return <ScrollFunction key={id} id={id} ref4={ref4} src={src} susu={susu} />;
+                {data.map(({ src, susu }, index) => {
+                    return <ScrollFunction key={index} index={index} ref4={ref4} src={src} susu={susu} />;
                 })}
             </>
         </div>
     )
 }
-const ScrollFunction = ({ id, ref4, src, susu }) => {
-    const { scrollYProgress } = useScroll({ target: ref4, offset: [`${id * 3}% 100%`, "600% 0%"] });
+const ScrollFunction = ({ index, ref4, src, susu }) => {
+    const { scrollYProgress } = useScroll({ target: ref4, offset: [`${(index + 1) * 3}% 100%`, "600% 0%"] });
     const z = useTransform(scrollYProgress, [0, 1], [100, 2000]);
     const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const rotate = useTransform(scrollYProgress, [0, 1], [-360, 360]);
