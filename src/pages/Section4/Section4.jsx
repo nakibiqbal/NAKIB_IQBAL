@@ -35,7 +35,7 @@ const Section4 = () => {
     // <section onMouseMove={handleMouseMoveSection} onMouseLeave={handleMouseLeaveSection} ref={ref4} id="section4">
     <section ref={ref4} id="section4">
       <div className="sec4Wrapper">
-        <Images ref4={ref4} />
+        <Images ref4={ref4.current} />
 
         {/* <Text ref4={ref4} /> */}
       </div>
