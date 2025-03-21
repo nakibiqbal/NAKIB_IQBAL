@@ -18,7 +18,7 @@ export default function Images({ ref4 }) {
 }
 const ScrollFunction = ({ index, ref4, src, susu }) => {
     const { scrollYProgress } = useScroll({ target: ref4, offset: [`${(index + 2) * 2}% -200%`, "400% start"] });
-    const z = useTransform(scrollYProgress, [0, 1], [100, 1800]);
+    const z = useTransform(scrollYProgress, [0, 1], [100, 2200]);
     const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
     const rotate = useTransform(scrollYProgress, [0, 1], [-360, 360]);
     return <motion.div
