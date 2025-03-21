@@ -3,7 +3,7 @@ import "./images.css";
 import "./text.css";
 import { useRef } from "react";
 import Images from "./Images";
-import Text from "./Text";
+// import Text from "./Text";
 
 const Section4 = () => {
   const ref4 = useRef(null);
@@ -30,13 +30,14 @@ const Section4 = () => {
   //     el.style.transform = "translate(0, 0)";
   //   });
   // };
+
   return (
     // <section onMouseMove={handleMouseMoveSection} onMouseLeave={handleMouseLeaveSection} ref={ref4} id="section4">
     <section ref={ref4} id="section4">
       <div className="sec4Wrapper">
         <Images ref4={ref4} />
 
-        <Text ref4={ref4} />
+        {/* <Text ref4={ref4} /> */}
       </div>
     </section>
   );
