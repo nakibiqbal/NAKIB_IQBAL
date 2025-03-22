@@ -13,7 +13,7 @@ const Section4 = () => {
       <div className="sec4Wrapper">
         <Images ref4={ref4} />
 
-        <Text ref4={ref4} />
+        <Text ref4={ref4.current} />
       </div>
     </section>
   );
