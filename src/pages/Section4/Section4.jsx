@@ -8,7 +8,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const Section4 = () => {
   const ref4 = useRef(null);
   const aboutMe = `I'm a self-taught passionate Frontend Developer and I'm a positive dreamer. I cherish a long dream in my heart for doing something better/creative in this sector. InshaAllah (if Allah wills). I'll be able to make better by having codial supports of all well-wishers. I love both programming and designing. I'm also interested in open source, and creative coding projects.`;
-  const { scrollYProgress } = useScroll({ target: ref4, offset: [`start 50%`, "end 50%"], });
+  const { scrollYProgress } = useScroll({ target: ref4, offset: [`start 100%`, "end 100%"], });
 
   return (
     <section ref={ref4} id="section4">
