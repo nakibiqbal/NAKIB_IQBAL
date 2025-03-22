@@ -17,7 +17,7 @@ export default function Text({ ref4 }) {
     )
 }
 const ScrollingText = ({ word, index, ref4 }) => {
-    const { scrollYProgress } = useScroll({ target: ref4, offset: [`50% -165%`, "300% 50%"], });
+    const { scrollYProgress } = useScroll({ target: ref4, offset: [`center center`, "end end"], });
     const wordOpacity = useTransform(scrollYProgress, [index * 0.016, (index + 1) * 0.016], [0, 1])
     return (
         <motion.h1
