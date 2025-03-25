@@ -15,7 +15,6 @@ const Section4 = () => {
       <div className="sec4Wrapper">
         <Images ref4={ref4} />
 
-
         <div className="aboutMe">
           <div className="mainTxt">
             {
@@ -31,8 +30,6 @@ const Section4 = () => {
             }
           </div>
         </div>
-
-
       </div>
     </section>
   );
