@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Variant2.css";
 
-const TextAnim2 = ({ text, delay }) => {
+const TextAnim2 = ({ text, delay, fadingOut, className2, value, staggerValue }) => {
     const [fadeOut, setFadeOut] = useState(false);
     const letters = text.split("");
 
     useEffect(() => {
         const timeout = setTimeout(() => {
             setFadeOut(true);
-        }, 1700); // Start fade-out after all letters are visible
+        }, fadingOut); // Start fade-out after all letters are visible
         return () => clearTimeout(timeout);
-    }, []);
+    }, [fadingOut]);
 
     return (
-        <motion.div className="forText2">
+        <motion.div className={className2 ? `forText2 ${className2}` : "forText2"}>
             {letters.map((letter, index) => (
                 <motion.p
                     key={index}
@@ -23,8 +23,7 @@ const TextAnim2 = ({ text, delay }) => {
                     animate={{ opacity: fadeOut ? 0 : 1 }}
                     transition={{
                         duration: 0.001,
-                        delay: fadeOut ? (Math.random() * 2) : (delay + index * 0.05),
-
+                        delay: fadeOut ? (Math.random() * value) : (delay + index * staggerValue),
                     }}
                 >
                     {letter}
@@ -34,22 +33,22 @@ const TextAnim2 = ({ text, delay }) => {
     );
 };
 
-const Variant2 = () => {
+const Variant2 = ({ delaying, className, className2, fadingOut, restart, text, value, staggerValue }) => {
     const [resetKey, setResetKey] = useState(0);
 
     useEffect(() => {
         const restartTimeout = setTimeout(() => {
             setResetKey((prev) => prev + 1);
-        }, 3700); // Restart after fade-out completes
+        }, restart); // Restart after fade-out completes
         return () => clearTimeout(restartTimeout);
-    }, [resetKey]);
+    }, [resetKey, restart]);
 
     return (
-        <div className="variant2">
+        <div className={className ? `variant2 ${className}` : "variant2"}>
 
             <div className="variant2_child" key={resetKey}>
-                {[0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2].map((delay, index) => (
-                    <TextAnim2 key={index} text="Good People" delay={delay} />
+                {delaying.map((delay, index) => (
+                    <TextAnim2 key={index} text={text} delay={delay} fadingOut={fadingOut} className2={className2} value={value} staggerValue={staggerValue} />
                 ))}
             </div>
 
