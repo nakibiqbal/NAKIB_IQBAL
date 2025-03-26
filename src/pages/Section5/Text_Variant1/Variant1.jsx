@@ -12,8 +12,8 @@ const TextAnim1 = ({ text, repeatDelay, delay }) => {
             {
                 text.split("").map((word, wordIndex) => (
                     <motion.p
-                        initial={{ opacity: [0, 0, 0, 0, 0, 1], }}
-                        animate={{ opacity: [1, 1, 1, 1, 1, 0], }}
+                        initial={{ opacity: [0, 0, 0, 0, 0, 0, 1], }}
+                        animate={{ opacity: [1, 1, 1, 1, 1, 1, 0], }}
                         transition={{
                             duration: 0.2,
                             delay: delay + (wordIndex * 0.02),
