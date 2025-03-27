@@ -15,7 +15,7 @@ const TextAnim2 = ({ text, delay, fadingOut, className2, value, staggerValue }) 
     }, [fadingOut]);
 
     return (
-        <motion.div className={className2 ? `forText2 ${className2}` : "forText2"}>
+        <motion.div className={className2 ? `forText txt2 ${className2}` : "forText txt2"}>
             {letters.map((letter, index) => (
                 <motion.p
                     key={index}

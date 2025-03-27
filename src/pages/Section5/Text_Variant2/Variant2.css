@@ -12,34 +12,10 @@
 }
 .variant2 {
   position: absolute;
-  top: 79vh;
+  bottom: 0;
   left: 0vw;
 }
-.variant2 p {
-  font-family: "Pixel Sans Serif";
-  font-size: 20px;
-  color: #00ff00;
-}
-.forText2 {
+.txt2 {
   width: 13rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
   height: 1.5rem;
-}
-.forText2 p:nth-child(4) {
-  margin-right: 10px;
-}
-.forText2 p:nth-child(15) {
-  margin-right: 10px;
-}
-.forText2 p:nth-child(26) {
-  margin-right: 10px;
-}
-.forText2 p:nth-child(37) {
-  margin-right: 10px;
-}
-.forText2 p:nth-child(48) {
-  margin-right: 10px;
 }

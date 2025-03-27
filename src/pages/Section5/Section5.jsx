@@ -1,6 +1,7 @@
 import "./Section5.css";
 import Variant1 from "./Text_Variant1/Variant1";
 import Variant2 from "./Text_Variant2/Variant2";
+import Variant3 from "./Text_Variant3/Variant3";
 
 const Section5 = () => {
     return (
@@ -11,7 +12,7 @@ const Section5 = () => {
                     delaying={[0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2]}
                     fadingOut={1700}
                     restart={3700}
-                    text="Good People"
+                    text="Good&nbsp;People"
                     value={2}
                     staggerValue={0.05}
                 />
@@ -25,6 +26,7 @@ const Section5 = () => {
                     value={3}
                     staggerValue={0.04}
                 />
+                <Variant3 />
             </div>
         </section>
     );
