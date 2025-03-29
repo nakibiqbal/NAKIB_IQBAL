@@ -2,6 +2,7 @@ import "./Section5.css";
 import Variant1 from "./Text_Variant1/Variant1";
 import Variant2 from "./Text_Variant2/Variant2";
 import Variant3 from "./Text_Variant3/Variant3";
+import Variant4 from "./Text_Variant4/Variant4";
 
 const Section5 = () => {
     return (
@@ -27,6 +28,7 @@ const Section5 = () => {
                     staggerValue={0.04}
                 />
                 <Variant3 />
+                <Variant4 />
             </div>
         </section>
     );
