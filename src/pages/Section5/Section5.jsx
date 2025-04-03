@@ -4,6 +4,7 @@ import Variant2 from "./Text_Variant2/Variant2";
 import Variant3 from "./Text_Variant3/Variant3";
 import Variant4 from "./Text_Variant4/Variant4";
 import Variant5 from "./Text_Variant5/Variant5";
+import Variant6 from "./Text_Variant6/Variant6";
 
 const Section5 = () => {
     return (
@@ -31,6 +32,7 @@ const Section5 = () => {
                 <Variant3 />
                 <Variant4 />
                 <Variant5 />
+                <Variant6 />
             </div>
         </section>
     );
