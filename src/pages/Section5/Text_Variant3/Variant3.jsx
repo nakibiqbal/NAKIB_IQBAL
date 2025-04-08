@@ -32,11 +32,11 @@ const Variant3 = () => {
     <div className='variant3'>
 
       <div className="variant3_child">
-        <TextAnim3 text="Be&nbsp;the&nbsp; best" delay={0.5} />
-        <TextAnim3 text="Be&nbsp;the&nbsp; best" delay={1} />
-        <TextAnim3 text="Be&nbsp;the&nbsp; best" delay={1.5} />
-        <TextAnim3 text="Be&nbsp;the&nbsp; best" delay={2} />
-        <TextAnim3 text="Be&nbsp;the&nbsp; best" delay={2.5} />
+        <TextAnim3 text="Be&nbsp;the&nbsp;best" delay={0} />
+        <TextAnim3 text="Be&nbsp;the&nbsp;best" delay={0.5} />
+        <TextAnim3 text="Be&nbsp;the&nbsp;best" delay={1} />
+        <TextAnim3 text="Be&nbsp;the&nbsp;best" delay={1.5} />
+        <TextAnim3 text="Be&nbsp;the&nbsp;best" delay={2} />
       </div>
 
     </div>

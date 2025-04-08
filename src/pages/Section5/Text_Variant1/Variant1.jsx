@@ -8,7 +8,7 @@ const TextAnim1 = ({ text, repeatDelay, delay }) => {
 
     return (
         <div
-            className="forText txt1" ref={textRef}>
+            className="forText" ref={textRef}>
             {
                 text.split("").map((word, wordIndex) => (
                     <motion.p

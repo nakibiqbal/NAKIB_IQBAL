@@ -27,17 +27,17 @@ const TextAnim4 = ({ text, delay, repeatDelay, staggerDelay }) => {
     );
 };
 
-const Variant4 = () => {
+const Variant4 = ({ text }) => {
 
     return (
-        <div className='variant4'>
+        <div className="variant4">
 
             <div className="variant4_child">
-                <TextAnim4 text="Be&nbsp;the&nbsp;best" repeatDelay={1} delay={0.2} staggerDelay={0.02} />
-                <TextAnim4 text="Be&nbsp;the&nbsp;best" repeatDelay={1} delay={0.3} staggerDelay={0.02} />
-                <TextAnim4 text="Be&nbsp;the&nbsp;best" repeatDelay={1} delay={0.4} staggerDelay={0.02} />
-                <TextAnim4 text="Be&nbsp;the&nbsp;best" repeatDelay={1} delay={0.5} staggerDelay={0.02} />
-                <TextAnim4 text="Be&nbsp;the&nbsp;best" repeatDelay={1} delay={0.6} staggerDelay={0.02} />
+                <TextAnim4 text={text} repeatDelay={1} delay={0} staggerDelay={0.02} />
+                <TextAnim4 text={text} repeatDelay={1} delay={0.1} staggerDelay={0.02} />
+                <TextAnim4 text={text} repeatDelay={1} delay={0.2} staggerDelay={0.02} />
+                <TextAnim4 text={text} repeatDelay={1} delay={0.3} staggerDelay={0.02} />
+                <TextAnim4 text={text} repeatDelay={1} delay={0.4} staggerDelay={0.02} />
             </div>
 
         </div>

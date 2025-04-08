@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Variant2.css";
 
-const TextAnim2 = ({ text, delay, fadingOut, className2, value, staggerValue }) => {
+const TextAnim2 = ({ text, delay, fadingOut, value, staggerValue }) => {
     const [fadeOut, setFadeOut] = useState(false);
     const letters = text.split("");
 
@@ -15,7 +15,7 @@ const TextAnim2 = ({ text, delay, fadingOut, className2, value, staggerValue }) 
     }, [fadingOut]);
 
     return (
-        <motion.div className={className2 ? `forText txt2 ${className2}` : "forText txt2"}>
+        <motion.div className="forText">
             {letters.map((letter, index) => (
                 <motion.p
                     key={index}
@@ -33,7 +33,7 @@ const TextAnim2 = ({ text, delay, fadingOut, className2, value, staggerValue }) 
     );
 };
 
-const Variant2 = ({ delaying, className, className2, fadingOut, restart, text, value, staggerValue }) => {
+const Variant2 = ({ delaying, fadingOut, restart, text, value, staggerValue }) => {
     const [resetKey, setResetKey] = useState(0);
 
     useEffect(() => {
@@ -44,14 +44,12 @@ const Variant2 = ({ delaying, className, className2, fadingOut, restart, text, v
     }, [resetKey, restart]);
 
     return (
-        <div className={className ? `variant2 ${className}` : "variant2"}>
-
+        <div className="variant2">
             <div className="variant2_child" key={resetKey}>
                 {delaying.map((delay, index) => (
-                    <TextAnim2 key={index} text={text} delay={delay} fadingOut={fadingOut} className2={className2} value={value} staggerValue={staggerValue} />
+                    <TextAnim2 key={index} text={text} delay={delay} fadingOut={fadingOut} value={value} staggerValue={staggerValue} />
                 ))}
             </div>
-
         </div>
     );
 };

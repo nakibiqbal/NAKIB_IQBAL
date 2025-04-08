@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
 import { useScramble } from "use-scramble";
 import { useEffect } from "react";
-import "./Variant6.css"
-const Variant6 = () => {
+import "./Variant7.css"
+const Variant7 = () => {
     const text = [
-        { text: "Hallucinations", second: 500 },
-        { text: "Illusion", second: 800 },
-        { text: "Apparition", second: 1100 },
-        { text: "Phantasm", second: 1400 },
-        { text: "Delusion", second: 1700 },
+        { text: "!false", second: 0 },
+        { text: "!false", second: 200 },
+        { text: "!false", second: 400 },
+        { text: "!false", second: 600 },
+        { text: "!false", second: 800 },
     ];
 
     return (
-        <div className="variant6">
+        <div className="variant7">
             {text.map(({ text, second }, index) => (
                 <Text key={index} text={text} second={second} />
             ))}
@@ -20,15 +20,15 @@ const Variant6 = () => {
     );
 };
 
-export default Variant6;
+export default Variant7;
 const Text = ({ text, index, second }) => {
     const { ref, replay } = useScramble({
         text: text,
         speed: 0.2,
-        range: [35, 50],
-        seed: 10,
-        tick: 1,
-        playOnMount: true,
+        range: [165, 175],
+        seed: 20,
+        tick: 2,
+        playOnMount: false,
         overdrive: false
     });
 
@@ -38,7 +38,7 @@ const Text = ({ text, index, second }) => {
                 replay();
             }, second);
             return () => clearTimeout(timeout);
-        }, 2500);
+        }, 2000);
         return () => clearInterval(interval);
     }, [replay, second]);
 

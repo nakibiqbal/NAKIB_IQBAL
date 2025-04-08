@@ -1,21 +1,3 @@
-.variant2_v2 {
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-}
-.forText2_v2 {
-  justify-content: flex-end !important;
-  width: 10rem !important;
-}
-.forText2_v2 p {
-  margin: auto !important;
-}
 .variant2 {
-  position: absolute;
-  bottom: 0;
-  left: 0vw;
-}
-.txt2 {
-  width: 13rem;
-  height: 1.5rem;
+  position: relative;
 }
