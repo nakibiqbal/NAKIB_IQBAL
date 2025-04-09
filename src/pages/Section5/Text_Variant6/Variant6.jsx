@@ -2,15 +2,14 @@
 import { useScramble } from "use-scramble";
 import { useEffect } from "react";
 import "./Variant6.css"
-const Variant6 = () => {
+const Variant6 = ({ text1, text2, text3, text4, text5 }) => {
     const text = [
-        { text: "Hallucinations", second: 500 },
-        { text: "Illusion", second: 800 },
-        { text: "Apparition", second: 1100 },
-        { text: "Phantasm", second: 1400 },
-        { text: "Delusion", second: 1700 },
+        { text: text1, second: 500 },
+        { text: text2, second: 800 },
+        { text: text3, second: 1100 },
+        { text: text4, second: 1400 },
+        { text: text5, second: 1700 },
     ];
-
     return (
         <div className="variant6">
             {text.map(({ text, second }, index) => (
@@ -38,7 +37,7 @@ const Text = ({ text, index, second }) => {
                 replay();
             }, second);
             return () => clearTimeout(timeout);
-        }, 2500);
+        }, 1500);
         return () => clearInterval(interval);
     }, [replay, second]);
 

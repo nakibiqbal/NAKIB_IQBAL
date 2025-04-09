@@ -1,11 +1,11 @@
 .variant6 {
-  width: 15rem;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
 .variant6 p {
   margin: 0;
   padding: 0;
-  line-height: 28px;
+  line-height: 25px;
   white-space: nowrap;
 }

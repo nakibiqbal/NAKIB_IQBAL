@@ -2,20 +2,23 @@
 import { useScramble } from "use-scramble";
 import { useEffect } from "react";
 import "./Variant7.css"
-const Variant7 = () => {
+
+const Variant7 = ({ mainText }) => {
     const text = [
-        { text: "!false", second: 0 },
-        { text: "!false", second: 200 },
-        { text: "!false", second: 400 },
-        { text: "!false", second: 600 },
-        { text: "!false", second: 800 },
+        { text: mainText, second: 0 },
+        { text: mainText, second: 200 },
+        { text: mainText, second: 400 },
+        { text: mainText, second: 600 },
+        { text: mainText, second: 800 },
     ];
 
     return (
         <div className="variant7">
-            {text.map(({ text, second }, index) => (
-                <Text key={index} text={text} second={second} />
-            ))}
+            <div className="scrambleVarian">
+                {text.map(({ text, second }, index) => (
+                    <Text key={index} text={text} second={second} />
+                ))}
+            </div>
         </div>
     );
 };
@@ -24,11 +27,11 @@ export default Variant7;
 const Text = ({ text, index, second }) => {
     const { ref, replay } = useScramble({
         text: text,
-        speed: 0.2,
-        range: [165, 175],
+        speed: 0.4,
+        range: [33, 47],
         seed: 20,
         tick: 2,
-        playOnMount: false,
+        playOnMount: true,
         overdrive: false
     });
 
@@ -38,7 +41,7 @@ const Text = ({ text, index, second }) => {
                 replay();
             }, second);
             return () => clearTimeout(timeout);
-        }, 2000);
+        }, 1500);
         return () => clearInterval(interval);
     }, [replay, second]);
 

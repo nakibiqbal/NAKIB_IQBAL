@@ -2,21 +2,28 @@
 import { motion } from "framer-motion";
 import "./Variant4.css";
 
-const TextAnim4 = ({ text, delay, repeatDelay, staggerDelay }) => {
+const TextAnim4 = ({ text, delay, duration }) => {
     return (
-        <motion.div className='forText txt4'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 0.05,
+                delay: 1,
+            }}
+            className='forText txt4'>
             {
                 text.split("").map((word, wordIndex) => (
                     <motion.p
                         initial={{ opacity: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1], }}
                         animate={{ opacity: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0], }}
                         transition={{
-                            duration: 0.5,
-                            delay: delay + (wordIndex * staggerDelay),
+                            duration: duration,
+                            delay: delay + (wordIndex * 0.02),
                             repeat:
                                 Infinity,
                             repeatType: "loop",
-                            repeatDelay: repeatDelay,
+                            repeatDelay: 1,
                         }}
                         key={wordIndex} >
                         {word}
@@ -27,17 +34,22 @@ const TextAnim4 = ({ text, delay, repeatDelay, staggerDelay }) => {
     );
 };
 
-const Variant4 = ({ text }) => {
+const Variant4 = ({ text, duration }) => {
 
     return (
         <div className="variant4">
 
             <div className="variant4_child">
-                <TextAnim4 text={text} repeatDelay={1} delay={0} staggerDelay={0.02} />
-                <TextAnim4 text={text} repeatDelay={1} delay={0.1} staggerDelay={0.02} />
-                <TextAnim4 text={text} repeatDelay={1} delay={0.2} staggerDelay={0.02} />
-                <TextAnim4 text={text} repeatDelay={1} delay={0.3} staggerDelay={0.02} />
-                <TextAnim4 text={text} repeatDelay={1} delay={0.4} staggerDelay={0.02} />
+                <TextAnim4 text={text} duration={duration} delay={0} />
+                <TextAnim4 text={text} duration={duration} delay={0.1} />
+                <TextAnim4 text={text} duration={duration} delay={0.2} />
+                <TextAnim4 text={text} duration={duration} delay={0.3} />
+                <TextAnim4 text={text} duration={duration} delay={0.4} />
+                <TextAnim4 text={text} duration={duration} delay={0.5} />
+                <TextAnim4 text={text} duration={duration} delay={0.6} />
+                <TextAnim4 text={text} duration={duration} delay={0.7} />
+                <TextAnim4 text={text} duration={duration} delay={0.8} />
+                <TextAnim4 text={text} duration={duration} delay={0.9} />
             </div>
 
         </div>

@@ -7,7 +7,13 @@ const TextAnim1 = ({ text, repeatDelay, delay }) => {
     const textRef = useRef(null);
 
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 0.05,
+                delay: 1.4,
+            }}
             className="forText" ref={textRef}>
             {
                 text.split("").map((word, wordIndex) => (
@@ -27,20 +33,19 @@ const TextAnim1 = ({ text, repeatDelay, delay }) => {
                     </motion.p>
                 ))
             }
-        </div>
+        </motion.div>
     );
 };
 
-const Variant1 = () => {
+const Variant1 = ({ text }) => {
     return (
         <div className="variant1">
-            <TextAnim1 text="Good&nbsp;Times" repeatDelay={0.85} delay={0.2} />
-            <TextAnim1 text="Good&nbsp;Times" repeatDelay={0.85} delay={0.4} />
-            <TextAnim1 text="Good&nbsp;Times" repeatDelay={0.85} delay={0.6} />
-            <TextAnim1 text="Good&nbsp;Times" repeatDelay={0.85} delay={0.8} />
-            <TextAnim1 text="Good&nbsp;Times" repeatDelay={0.85} delay={1} />
+            <TextAnim1 text={text} repeatDelay={0.85} delay={0.2} />
+            <TextAnim1 text={text} repeatDelay={0.85} delay={0.4} />
+            <TextAnim1 text={text} repeatDelay={0.85} delay={0.6} />
+            <TextAnim1 text={text} repeatDelay={0.85} delay={0.8} />
+            <TextAnim1 text={text} repeatDelay={0.85} delay={1} />
         </div>
-
     )
 }
 

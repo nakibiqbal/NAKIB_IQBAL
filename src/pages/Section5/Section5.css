@@ -18,7 +18,18 @@
   position: absolute;
   top: 50%;
   left: 0%;
-  width: 15rem;
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mainTextVariant2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 23rem;
   height: 15rem;
   display: flex;
   flex-direction: column;

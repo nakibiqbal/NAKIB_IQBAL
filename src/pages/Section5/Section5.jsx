@@ -1,45 +1,13 @@
 import "./Section5.css";
 import { useState, useEffect, useRef } from "react";
 
-import Variant1 from "./Text_Variant1/Variant1";
-import Variant2 from "./Text_Variant2/Variant2";
-import Variant3 from "./Text_Variant3/Variant3";
-import Variant4 from "./Text_Variant4/Variant4";
-import Variant5 from "./Text_Variant5/Variant5";
-import Variant6 from "./Text_Variant6/Variant6";
-import Variant7 from "./Text_Variant7/Variant7";
+import MainVariant1 from "./Main_Variant1/MainVariant1";
+import MainVariant2 from "./Main_Variant2/MainVariant2";
 
-const Section5 = () => {
+// Custom hook to handle interval-based updates
+const useVariantInterval = (durations) => {
     const [currentVariant, setCurrentVariant] = useState(1);
-    const durationsRef = useRef([2500, 3800, 5500, 4000, 2900, 2900, 2800, 5000, 4300]);
-
-    const variants = [
-        <Variant1 key={1} />,
-        <Variant2
-            key={2}
-            delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]}
-            fadingOut={1700}
-            restart={3700}
-            text="Good&nbsp;People"
-            value={2}
-            staggerValue={0.05}
-        />,
-        <Variant2
-            key={3}
-            delaying={[0.5, 0.9, 1.3, 1.7, 2.1]}
-            fadingOut={2500}
-            restart={5500}
-            text="Memories"
-            value={3}
-            staggerValue={0.04}
-        />,
-        <Variant3 key={4} />,
-        <Variant4 key={5} text="Stoicism" />,
-        <Variant4 key={6} text="Believe" />,
-        <Variant5 key={7} />,
-        <Variant6 key={8} />,
-        <Variant7 key={9} />,
-    ];
+    const durationsRef = useRef(durations);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -51,12 +19,27 @@ const Section5 = () => {
         return () => clearInterval(interval);
     }, [currentVariant]);
 
+    return currentVariant;
+};
+
+const Section5 = () => {
+    const durations1 = [3000, 3800, 5500, 4800, 4000, 3200, 2800, 5000, 5000];
+    const durations2 = [5500, 3800, 4000, 3500, 3800, 4500, 3200, 5000, 4500];
+
+    const currentVariant1 = useVariantInterval(durations1);
+    const currentVariant2 = useVariantInterval(durations2);
+
     return (
         <section id="section5">
             <div className="sec5Wrapper">
+
                 <div className="mainTextVariant1">
-                    {variants[currentVariant - 1] || null}
+                    <MainVariant1 currentVariant={currentVariant1} />
                 </div>
+                <div className="mainTextVariant2">
+                    <MainVariant2 currentVariant={currentVariant2} />
+                </div>
+
             </div>
         </section>
     );

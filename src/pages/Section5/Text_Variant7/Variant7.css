@@ -1,11 +1,13 @@
 .variant7 {
-  width: 7rem;
-  overflow: hidden;
   position: relative;
+}
+.scrambleVarian {
+  width: 100%;
+  overflow: hidden;
 }
 .variant7 p {
   margin: 0;
   padding: 0;
-  line-height: 22px;
+  line-height: 24px;
   white-space: nowrap;
 }
