@@ -41,7 +41,7 @@ const Text = ({ text, index, second }) => {
                 replay();
             }, second);
             return () => clearTimeout(timeout);
-        }, 1500);
+        }, 1250);
         return () => clearInterval(interval);
     }, [replay, second]);
 

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 import MainVariant1 from "./Main_Variant1/MainVariant1";
 import MainVariant2 from "./Main_Variant2/MainVariant2";
+import MainVariant3 from "./Main_Variant3/MainVariant3";
 
 // Custom hook to handle interval-based updates
 const useVariantInterval = (durations) => {
@@ -25,9 +26,11 @@ const useVariantInterval = (durations) => {
 const Section5 = () => {
     const durations1 = [3000, 3800, 5500, 4800, 4000, 3200, 2800, 5000, 5000];
     const durations2 = [5500, 3800, 4000, 3500, 3800, 4500, 3200, 5000, 4500];
+    const durations3 = [3500, 3800, 3800, 3500, 4000, 3000, 3500, 5500, 4500];
 
     const currentVariant1 = useVariantInterval(durations1);
     const currentVariant2 = useVariantInterval(durations2);
+    const currentVariant3 = useVariantInterval(durations3);
 
     return (
         <section id="section5">
@@ -38,6 +41,9 @@ const Section5 = () => {
                 </div>
                 <div className="mainTextVariant2">
                     <MainVariant2 currentVariant={currentVariant2} />
+                </div>
+                <div className="mainTextVariant3">
+                    <MainVariant3 currentVariant={currentVariant3} />
                 </div>
 
             </div>
