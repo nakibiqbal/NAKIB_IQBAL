@@ -13,9 +13,9 @@ const MainVariant3 = ({ currentVariant }) => {
             value={2}
             staggerValue={0.05}
         />,
-        <Variants.Variant6 key={8} text1="Check" text2="!Check" text3="Check" text4="!Check" text5="Check" />,
+        <Variants.Variant6 key={8} text1="Check" text2="!Check" text3="Check" text4="!Check" text5="Check" rangeOFscramble={[35, 50]} />,
         <Variants.Variant4 key={5} text="The&nbsp;Parallax" duration={0.45} />,
-        <Variants.Variant7 key={9} mainText="Into&nbsp;the&nbsp;Void" />,
+        <Variants.Variant7 key={9} mainText="Into&nbsp;the&nbsp;Void" rangeOFscramble={[33, 47]} animReset={1200} />,
         <Variants.Variant1 key={1} text="Alternatives..." />,
         <Variants.Variant4 key={6} text="See&nbsp;the&nbsp;unseen" duration={0.3} />,
         <Variants.Variant2

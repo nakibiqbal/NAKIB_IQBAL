@@ -2,7 +2,7 @@
 import { useScramble } from "use-scramble";
 import { useEffect } from "react";
 import "./Variant6.css"
-const Variant6 = ({ text1, text2, text3, text4, text5 }) => {
+const Variant6 = ({ text1, text2, text3, text4, text5, rangeOFscramble }) => {
     const text = [
         { text: text1, second: 500 },
         { text: text2, second: 800 },
@@ -13,18 +13,18 @@ const Variant6 = ({ text1, text2, text3, text4, text5 }) => {
     return (
         <div className="variant6">
             {text.map(({ text, second }, index) => (
-                <Text key={index} text={text} second={second} />
+                <Text key={index} text={text} second={second} rangeOFscramble={rangeOFscramble} />
             ))}
         </div>
     );
 };
 
 export default Variant6;
-const Text = ({ text, index, second }) => {
+const Text = ({ text, index, second, rangeOFscramble }) => {
     const { ref, replay } = useScramble({
         text: text,
         speed: 0.2,
-        range: [35, 50],
+        range: rangeOFscramble,
         seed: 10,
         tick: 1,
         playOnMount: true,

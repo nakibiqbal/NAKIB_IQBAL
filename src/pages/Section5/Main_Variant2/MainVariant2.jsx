@@ -13,7 +13,7 @@ const MainVariant2 = ({ currentVariant }) => {
             staggerValue={0.02}
         />,
         <Variants.Variant4 key={5} text="Stoicism" duration={0.5} />,
-        <Variants.Variant7 key={9} mainText="The&nbsp;Matrix&nbsp;Lies" />,
+        <Variants.Variant7 key={9} mainText="The&nbsp;Matrix&nbsp;Lies" rangeOFscramble={[37, 35]} animReset={1200} />,
         <Variants.Variant5 key={7} text="FOCUS" />,
         <Variants.Variant2
             key={2}
@@ -26,7 +26,7 @@ const MainVariant2 = ({ currentVariant }) => {
         />,
         <Variants.Variant3 key={4} text="No&nbsp;coincidences" />,
         <Variants.Variant1 key={1} text="Lets&nbsp;Start" />,
-        <Variants.Variant6 key={8} text1="Hallucinations" text2="Illusion" text3="Apparition" text4="Phantasm" text5="Delusion" />,
+        <Variants.Variant6 key={8} text1="Hallucinations" text2="Illusion" text3="Apparition" text4="Phantasm" text5="Delusion" rangeOFscramble={[35, 50]} />,
         <Variants.Variant4 key={6} text="See&nbsp;the&nbsp;unseen" duration={0.2} />,
     ];
     return (

@@ -25,8 +25,8 @@ const MainVariant1 = ({ currentVariant }) => {
         <Variants.Variant4 key={5} text="Less,&nbsp;but&nbsp;deeper" duration={0.5} />,
         <Variants.Variant4 key={6} text="Believe" duration={0.2} />,
         <Variants.Variant5 key={7} text="GAIN" />,
-        <Variants.Variant6 key={8} text1="I know nothing" text2="I know nothing" text3="I know nothing" text4="I know nothing" text5="I know nothing" />,
-        <Variants.Variant7 key={9} mainText="Break&nbsp;the&nbsp;system" />,
+        <Variants.Variant6 key={8} text1="I know nothing" text2="I know nothing" text3="I know nothing" text4="I know nothing" text5="I know nothing" rangeOFscramble={[35, 50]} />,
+        <Variants.Variant7 key={9} mainText="Break&nbsp;the&nbsp;system" rangeOFscramble={[35, 40]} animReset={1200} />,
     ];
     return (
         <>
