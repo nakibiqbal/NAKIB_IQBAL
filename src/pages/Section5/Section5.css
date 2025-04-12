@@ -58,6 +58,17 @@
   justify-content: center;
   align-items: flex-start;
 }
+.mainTextVariant5 {
+  position: absolute;
+  top: 35vh;
+  left: 15vw;
+  width: 23rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .forText {
   display: flex;
   flex-wrap: wrap;

@@ -11,7 +11,7 @@ const TextAnim3 = ({ text, delay }) => {
       animate={{ opacity: 1 }}
       transition={{
         duration: 0.05,
-        delay: 2.5,
+        delay: 1,
       }}
       className='forText txt3'>
       {letters.map((letter, index) => (

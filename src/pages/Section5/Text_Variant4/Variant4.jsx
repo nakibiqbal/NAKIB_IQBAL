@@ -9,7 +9,7 @@ const TextAnim4 = ({ text, delay, duration }) => {
             animate={{ opacity: 1 }}
             transition={{
                 duration: 0.05,
-                delay: 1,
+                delay: 0.5,
             }}
             className='forText txt4'>
             {

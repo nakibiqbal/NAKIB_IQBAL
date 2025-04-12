@@ -27,6 +27,20 @@ const MainVariant1 = ({ currentVariant }) => {
         <Variants.Variant5 key={7} text="GAIN" />,
         <Variants.Variant6 key={8} text1="I know nothing" text2="I know nothing" text3="I know nothing" text4="I know nothing" text5="I know nothing" rangeOFscramble={[35, 50]} />,
         <Variants.Variant7 key={9} mainText="Break&nbsp;the&nbsp;system" rangeOFscramble={[35, 40]} animReset={1200} />,
+        <Variants.Variant3 key={4} text="No&nbsp;coincidences" />,
+        <Variants.Variant2
+            key={3}
+            delaying={[0.5, 0.7, 0.9, 1.1, 1.3]}
+            fadingOut={1800}
+            restart={4000}
+            text="Don't&nbsp;be&nbsp;afraid"
+            value={2}
+            staggerValue={0.03}
+        />,
+        <Variants.Variant1 key={1} text="Dark&nbsp;days....." />,
+        <Variants.Variant6 key={8} text1="True" text2="False" text3="True" text4="False" text5="True" rangeOFscramble={[35, 50]} />,
+        <Variants.Variant4 key={5} text="Behind&nbsp;you" duration={0.4} />,
+        <Variants.Variant7 key={9} mainText="The&nbsp;world&nbsp;is&nbsp;a&nbsp;mirror&nbsp;of&nbsp;lies" rangeOFscramble={[35, 35]} animReset={1200} />,
     ];
     return (
         <>
