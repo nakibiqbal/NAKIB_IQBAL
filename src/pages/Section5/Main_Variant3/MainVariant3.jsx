@@ -28,8 +28,7 @@ const MainVariant3 = ({ currentVariant }) => {
             staggerValue={0.01}
         />,
         <Variants.Variant3 key={4} text="Shadow&nbsp;of&nbsp;Fade" />,
-
-        <Variants.Variant6 key={8} text1="Misunderstand" text2="Misbehave" text3="Misconception" text4="Miskichu" text5="Miskichu" rangeOFscramble={[35, 50]} />,
+        <Variants.Variant6 key={8} text1="Misunderstanding" text2="Misbehave" text3="Misconception" text4="Misinform" text5="Misadventure" rangeOFscramble={[35, 50]} />,
         <Variants.Variant5 key={7} text="The&nbsp;Paradox" />,
         <Variants.Variant4 key={5} text="Truth&nbsp;lies" duration={0.45} />,
         <Variants.Variant2
