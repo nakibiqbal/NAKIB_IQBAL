@@ -28,6 +28,22 @@ const MainVariant3 = ({ currentVariant }) => {
             staggerValue={0.01}
         />,
         <Variants.Variant3 key={4} text="Shadow&nbsp;of&nbsp;Fade" />,
+
+        <Variants.Variant6 key={8} text1="Misunderstand" text2="Misbehave" text3="Misconception" text4="Miskichu" text5="Miskichu" rangeOFscramble={[35, 50]} />,
+        <Variants.Variant5 key={7} text="The&nbsp;Paradox" />,
+        <Variants.Variant4 key={5} text="Truth&nbsp;lies" duration={0.45} />,
+        <Variants.Variant2
+            key={3}
+            delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]}
+            fadingOut={1800}
+            restart={5000}
+            text="Let&nbsp;them&nbsp;adjust"
+            value={3}
+            staggerValue={0.05}
+        />,
+        <Variants.Variant7 key={9} mainText="Escaping&nbsp;reality" rangeOFscramble={[33, 47]} animReset={1200} />,
+        <Variants.Variant3 key={4} text="Break&nbsp;the&nbsp;system" />,
+
     ];
     return (
         <>

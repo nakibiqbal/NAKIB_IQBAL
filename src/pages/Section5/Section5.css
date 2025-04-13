@@ -16,8 +16,8 @@
 }
 .mainTextVariant1 {
   position: absolute;
-  top: -3vh;
-  left: 1vw;
+  top: -10vh;
+  left: 2vw;
   width: 20rem;
   height: 15rem;
   display: flex;
@@ -27,7 +27,7 @@
 }
 .mainTextVariant2 {
   position: absolute;
-  bottom: 0vh;
+  bottom: -5vh;
   left: 5vw;
   width: 23rem;
   height: 15rem;
@@ -39,7 +39,7 @@
 .mainTextVariant3 {
   position: absolute;
   top: 30vh;
-  right: 0vw;
+  right: 10vw;
   width: 23rem;
   height: 15rem;
   display: flex;
@@ -49,9 +49,9 @@
 }
 .mainTextVariant4 {
   position: absolute;
-  top: 60vh;
-  right: 10vw;
-  width: 23rem;
+  bottom: -10vh;
+  right: 2vw;
+  width: 21rem;
   height: 15rem;
   display: flex;
   flex-direction: column;
@@ -61,8 +61,41 @@
 .mainTextVariant5 {
   position: absolute;
   top: 35vh;
-  left: 15vw;
+  left: 10vw;
   width: 23rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mainTextVariant6 {
+  position: absolute;
+  top: 0vh;
+  right: 0vw;
+  width: 20rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mainTextVariant7 {
+  position: absolute;
+  top: 10vh;
+  left: 30vw;
+  width: 22rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.mainTextVariant8 {
+  position: absolute;
+  bottom: 12vh;
+  right: 25vw;
+  width: 22rem;
   height: 15rem;
   display: flex;
   flex-direction: column;
