@@ -82,8 +82,8 @@
 }
 .mainTextVariant7 {
   position: absolute;
-  top: 10vh;
-  left: 30vw;
+  top: 7vh;
+  left: 32vw;
   width: 26rem;
   height: 15rem;
   display: flex;
@@ -94,7 +94,7 @@
 .mainTextVariant8 {
   position: absolute;
   bottom: 12vh;
-  right: 25vw;
+  right: 30vw;
   width: 25rem;
   height: 15rem;
   display: flex;
