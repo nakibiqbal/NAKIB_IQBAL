@@ -30,7 +30,7 @@ const MainVariant8 = ({ currentVariant }) => {
             value={2}
             staggerValue={0.05}
         />,
-        <Variants.Variant5 key={7} text="in the world" />,
+        <Variants.Variant5 key={7} text="in&nbsp;the&nbsp;world" />,
         <Variants.Variant7 key={9} mainText="The&nbsp;Matrix&nbsp;Lies" rangeOFscramble={[37, 35]} animReset={1200} />,
         <Variants.Variant4 key={5} text="Stoicism" duration={0.5} />,
         <Variants.Variant2
