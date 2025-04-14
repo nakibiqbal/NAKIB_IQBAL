@@ -50,7 +50,6 @@ const Section5 = () => {
     return (
         <section id="section5">
             <div className="sec5Wrapper">
-
                 <div className="mainTextVariant1">
                     <MainVariant1 currentVariant={currentVariant1} />
                 </div>
