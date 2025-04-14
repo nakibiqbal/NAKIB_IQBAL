@@ -3,7 +3,7 @@ import Variants from "../All_Variants/Variants";
 
 const MainVariant3 = ({ currentVariant }) => {
     const variants = [
-        <Variants.Variant5 key={7} text="BE&nbsp;YOU" />,
+        <Variants.Variant5 key={7} text="TRUTH&nbsp;LIES" />,
         <Variants.Variant2
             key={2}
             delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]}
@@ -13,7 +13,7 @@ const MainVariant3 = ({ currentVariant }) => {
             value={2}
             staggerValue={0.05}
         />,
-        <Variants.Variant6 key={8} text1="Check" text2="!Check" text3="Check" text4="!Check" text5="Check" rangeOFscramble={[35, 50]} />,
+        <Variants.Variant6 key={8} text1="Infinity" text2="doesn't exist" text3="in the world" text4="in the world" text5="in the world" rangeOFscramble={[35, 50]} />,
         <Variants.Variant4 key={5} text="The&nbsp;Parallax" duration={0.45} />,
         <Variants.Variant7 key={9} mainText="Into&nbsp;the&nbsp;Void" rangeOFscramble={[33, 47]} animReset={1200} />,
         <Variants.Variant1 key={1} text="Alternatives..." />,
@@ -30,7 +30,7 @@ const MainVariant3 = ({ currentVariant }) => {
         <Variants.Variant3 key={4} text="Shadow&nbsp;of&nbsp;Fade" />,
         <Variants.Variant6 key={8} text1="Misunderstanding" text2="Misbehave" text3="Misconception" text4="Misinform" text5="Misadventure" rangeOFscramble={[35, 50]} />,
         <Variants.Variant5 key={7} text="The&nbsp;Paradox" />,
-        <Variants.Variant4 key={5} text="Truth&nbsp;lies" duration={0.45} />,
+        <Variants.Variant4 key={5} text="Be&nbsp;you" duration={0.45} />,
         <Variants.Variant2
             key={3}
             delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]}

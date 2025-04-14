@@ -19,8 +19,8 @@ const MainVariant7 = ({ currentVariant }) => {
         <Variants.Variant4 key={6} text="Anonymous" duration={0.15} />,
         <Variants.Variant7 key={9} mainText="Artificial&nbsp;Intelligence" rangeOFscramble={[65, 125]} animReset={1300} />,
         <Variants.Variant6 key={8} text1="True" text2="False" text3="True" text4="False" text5="True" rangeOFscramble={[35, 50]} />,
-        <Variants.Variant5 key={7} text="The&nbsp;Paradox" />,
-        <Variants.Variant1 key={1} text="Dark&nbsp;days....." />,
+        <Variants.Variant5 key={7} text="Infinity&nbsp;doesn't&nbsp;exist" />,
+        <Variants.Variant1 key={1} text="in&nbsp;the&nbsp;world" />,
         <Variants.Variant2
             key={2}
             delaying={[0.1, 0.2, 0.5, 0.6, 0.8]}

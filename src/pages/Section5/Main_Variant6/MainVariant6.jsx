@@ -17,7 +17,7 @@ const MainVariant6 = ({ currentVariant }) => {
             staggerValue={0.01}
         />,
         <Variants.Variant4 key={6} text="Standing&nbsp;still&nbsp;is&nbsp;moving" duration={0.3} />,
-        <Variants.Variant1 key={1} text="The&nbsp;Paradox" />,
+        <Variants.Variant1 key={1} text="The&nbsp;Matrix" />,
         <Variants.Variant7 key={9} mainText="See&nbsp;the&nbsp;unseen" rangeOFscramble={[35, 38]} animReset={1200} />,
         <Variants.Variant2
             key={2}

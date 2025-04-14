@@ -20,7 +20,7 @@ const MainVariant2 = ({ currentVariant }) => {
             delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]}
             fadingOut={1700}
             restart={3700}
-            text="Nothing&nbsp;stays"
+            text="Infinity&nbsp;doesn't&nbsp;exist"
             value={2}
             staggerValue={0.05}
         />,
@@ -37,7 +37,7 @@ const MainVariant2 = ({ currentVariant }) => {
             delaying={[0.5, 0.8, 1.1, 1.4, 1.7]}
             fadingOut={3000}
             restart={5500}
-            text="Perfection&nbsp;is&nbsp;a&nbsp;trap"
+            text="Nothing&nbsp;stays"
             value={2}
             staggerValue={0.02}
         />,
