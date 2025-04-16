@@ -26,7 +26,7 @@ const MainVariant1 = ({ currentVariant }) => {
         <Variants.Variant4 key={6} text="Believe" duration={0.2} />,
         <Variants.Variant5 key={7} text="GAIN" />,
         <Variants.Variant6 key={8} text1="Infinity" text2="doesn't exist" text3="in the world" text4="in the world" text5="in the world" rangeOFscramble={[35, 50]} />,
-        <Variants.Variant7 key={9} mainText="Break&nbsp;the&nbsp;system" rangeOFscramble={[35, 40]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="Break&nbsp;the&nbsp;system" rangeOFscramble={[35, 40]} animReset={1700} />,
         <Variants.Variant3 key={4} text="No&nbsp;coincidences" />,
         <Variants.Variant2
             key={3}
@@ -40,7 +40,7 @@ const MainVariant1 = ({ currentVariant }) => {
         <Variants.Variant1 key={1} text="in&nbsp;the&nbsp;world..." />,
         <Variants.Variant6 key={8} text1="True" text2="False" text3="True" text4="False" text5="True" rangeOFscramble={[35, 50]} />,
         <Variants.Variant4 key={5} text="Behind&nbsp;you" duration={0.4} />,
-        <Variants.Variant7 key={9} mainText="The&nbsp;world&nbsp;is&nbsp;a&nbsp;mirror&nbsp;of&nbsp;lies" rangeOFscramble={[35, 35]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="The&nbsp;world&nbsp;is&nbsp;a&nbsp;mirror&nbsp;of&nbsp;lies" rangeOFscramble={[35, 35]} animReset={3000} />,
     ];
     return (
         <>

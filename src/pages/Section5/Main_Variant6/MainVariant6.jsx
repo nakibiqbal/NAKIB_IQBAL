@@ -18,7 +18,7 @@ const MainVariant6 = ({ currentVariant }) => {
         />,
         <Variants.Variant4 key={6} text="Standing&nbsp;still&nbsp;is&nbsp;moving" duration={0.3} />,
         <Variants.Variant1 key={1} text="The&nbsp;Matrix" />,
-        <Variants.Variant7 key={9} mainText="See&nbsp;the&nbsp;unseen" rangeOFscramble={[35, 38]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="See&nbsp;the&nbsp;unseen" rangeOFscramble={[35, 38]} animReset={1500} />,
         <Variants.Variant2
             key={2}
             delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]}
@@ -29,9 +29,9 @@ const MainVariant6 = ({ currentVariant }) => {
             staggerValue={0.05}
         />,
         <Variants.Variant4 key={5} text="No&nbsp;coincidences" duration={0.45} />,
-        <Variants.Variant7 key={9} mainText="The&nbsp;Paradox" rangeOFscramble={[33, 47]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="The&nbsp;Paradox" rangeOFscramble={[33, 47]} animReset={1500} />,
         <Variants.Variant4 key={5} text="Good&nbsp;Times" duration={0.2} />,
-        <Variants.Variant5 key={7} text="The&nbsp;Matrix&nbsp;Lies" />,
+        <Variants.Variant5 key={7} text="Memories" />,
         <Variants.Variant1 key={1} text="Anonymous___" />,
         <Variants.Variant2
             key={3}

@@ -3,8 +3,8 @@ import Variants from "../All_Variants/Variants";
 
 const MainVariant8 = ({ currentVariant }) => {
     const variants = [
-        <Variants.Variant4 key={5} text="Anonymous___" duration={0.5} />,
-        <Variants.Variant5 key={7} text="We&nbsp;see&nbsp;more&nbsp;in&nbsp;darkness" />,
+        <Variants.Variant4 key={5} text="We&nbsp;see&nbsp;more&nbsp;in&nbsp;darkness" duration={0.5} />,
+        <Variants.Variant5 key={7} text="Anonymous___" />,
         <Variants.Variant2
             key={3}
             delaying={[0.5, 0.8, 1.1, 1.4, 1.7]}
@@ -14,7 +14,7 @@ const MainVariant8 = ({ currentVariant }) => {
             value={2}
             staggerValue={0.02}
         />,
-        <Variants.Variant7 key={9} mainText="Don't&nbsp;fall&nbsp;into&nbsp;the&nbsp;loop" rangeOFscramble={[35, 50]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="Don't&nbsp;fall&nbsp;into&nbsp;the&nbsp;loop" rangeOFscramble={[35, 50]} animReset={2400} />,
         <Variants.Variant1 key={1} text="Behind&nbsp;you" />,
         <Variants.Variant3 key={4} text="I&nbsp;know&nbsp;nothing" />,
         <Variants.Variant4 key={6} text="See&nbsp;the&nbsp;unseen" duration={0.2} />,
@@ -31,7 +31,7 @@ const MainVariant8 = ({ currentVariant }) => {
             staggerValue={0.05}
         />,
         <Variants.Variant5 key={7} text="in&nbsp;the&nbsp;world" />,
-        <Variants.Variant7 key={9} mainText="The&nbsp;Matrix&nbsp;Lies" rangeOFscramble={[37, 35]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="The&nbsp;Matrix&nbsp;Lies" rangeOFscramble={[37, 35]} animReset={1500} />,
         <Variants.Variant4 key={5} text="Stoicism" duration={0.5} />,
         <Variants.Variant2
             key={3}

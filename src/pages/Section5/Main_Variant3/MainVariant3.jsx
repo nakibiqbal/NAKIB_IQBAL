@@ -15,7 +15,7 @@ const MainVariant3 = ({ currentVariant }) => {
         />,
         <Variants.Variant6 key={8} text1="Infinity" text2="doesn't exist" text3="in the world" text4="in the world" text5="in the world" rangeOFscramble={[35, 50]} />,
         <Variants.Variant4 key={5} text="The&nbsp;Parallax" duration={0.45} />,
-        <Variants.Variant7 key={9} mainText="Into&nbsp;the&nbsp;Void" rangeOFscramble={[33, 47]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="Into&nbsp;the&nbsp;Void" rangeOFscramble={[33, 47]} animReset={1400} />,
         <Variants.Variant1 key={1} text="Alternatives..." />,
         <Variants.Variant4 key={6} text="See&nbsp;the&nbsp;unseen" duration={0.3} />,
         <Variants.Variant2
@@ -40,7 +40,7 @@ const MainVariant3 = ({ currentVariant }) => {
             value={3}
             staggerValue={0.05}
         />,
-        <Variants.Variant7 key={9} mainText="Escaping&nbsp;reality" rangeOFscramble={[33, 47]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="Escaping&nbsp;reality" rangeOFscramble={[33, 47]} animReset={1500} />,
         <Variants.Variant3 key={4} text="Break&nbsp;the&nbsp;system" />,
 
     ];

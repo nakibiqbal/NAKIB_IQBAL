@@ -1,6 +1,6 @@
 #section5 {
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   position: relative;
 }
 .sec5Wrapper {
@@ -16,7 +16,7 @@
 }
 .mainTextVariant1 {
   position: absolute;
-  top: -10vh;
+  top: 0vh;
   left: 2vw;
   width: 20rem;
   height: 15rem;
@@ -27,7 +27,7 @@
 }
 .mainTextVariant2 {
   position: absolute;
-  bottom: -5vh;
+  bottom: 10vh;
   left: 5vw;
   width: 23rem;
   height: 15rem;
@@ -38,7 +38,7 @@
 }
 .mainTextVariant3 {
   position: absolute;
-  top: 30vh;
+  top: 45vh;
   right: 10vw;
   width: 25rem;
   height: 15rem;
@@ -49,7 +49,7 @@
 }
 .mainTextVariant4 {
   position: absolute;
-  bottom: -10vh;
+  bottom: 0vh;
   right: 2vw;
   width: 26rem;
   height: 15rem;
@@ -60,7 +60,7 @@
 }
 .mainTextVariant5 {
   position: absolute;
-  top: 40vh;
+  top: 55vh;
   left: 10vw;
   width: 25rem;
   height: 15rem;
@@ -71,7 +71,7 @@
 }
 .mainTextVariant6 {
   position: absolute;
-  top: 0vh;
+  top: 10vh;
   right: 0vw;
   width: 25rem;
   height: 15rem;
@@ -82,8 +82,8 @@
 }
 .mainTextVariant7 {
   position: absolute;
-  top: 7vh;
-  left: 32vw;
+  top: 15vh;
+  left: 30vw;
   width: 26rem;
   height: 15rem;
   display: flex;
@@ -93,7 +93,7 @@
 }
 .mainTextVariant8 {
   position: absolute;
-  bottom: 12vh;
+  bottom: 15vh;
   right: 30vw;
   width: 25rem;
   height: 15rem;

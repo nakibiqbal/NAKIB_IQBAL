@@ -6,7 +6,7 @@ const MainVariant5 = ({ currentVariant }) => {
         <Variants.Variant4 key={6} text="Infinity&nbsp;doesn't exist" duration={0.3} />,
         <Variants.Variant3 key={4} text="in&nbsp;the&nbsp;world" />,
         <Variants.Variant4 key={5} text="Anonymous___" duration={0.45} />,
-        <Variants.Variant7 key={9} mainText="Beyond&nbsp;this&nbsp;dimension" rangeOFscramble={[35, 35]} animReset={1200} />,
+        <Variants.Variant7 key={9} mainText="Beyond&nbsp;this&nbsp;dimension" rangeOFscramble={[35, 35]} animReset={2500} />,
         <Variants.Variant2
             key={2}
             delaying={[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]}
@@ -29,7 +29,7 @@ const MainVariant5 = ({ currentVariant }) => {
             staggerValue={0.01}
         />,
         <Variants.Variant1 key={1} text="Anonymous___" />,
-        <Variants.Variant5 key={7} text="The&nbsp;Matrix&nbsp;Lies" />,
+        <Variants.Variant5 key={7} text="Less&nbsp;interaction" />,
         <Variants.Variant7 key={9} mainText="The&nbsp;Paradox" rangeOFscramble={[33, 47]} animReset={1200} />,
         <Variants.Variant2
             key={3}

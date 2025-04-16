@@ -43,7 +43,7 @@ const Text = ({ text, index, second, rangeOFscramble, animReset }) => {
             return () => clearTimeout(timeout);
         }, animReset);
         return () => clearInterval(interval);
-    }, [replay, second, animReset]);
+    }, [second, animReset]);
 
     return (
         <p key={index} ref={ref}></p>
