@@ -167,24 +167,24 @@
   }
   .one {
     top: 0vh;
-    left: 10vw;
+    left: 0vw;
   }
   .three {
     top: auto !important;
     left: 0;
-    bottom: 15rem;
+    bottom: 13rem;
   }
   .four {
-    bottom: 5rem;
+    bottom: 3rem;
     right: -20vw;
   }
   .five {
-    top: 15rem;
-    left: 0;
+    top: 18rem;
+    left: 10vw;
   }
   .six {
-    top: 7rem;
-    right: -25vw;
+    top: 8rem;
+    right: -30vw;
   }
   .seven {
     display: none;
@@ -194,5 +194,8 @@
   }
   .two {
     display: none;
+  }
+  .skillIcons {
+    transform: translateY(3rem);
   }
 }
