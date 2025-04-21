@@ -175,7 +175,7 @@
     left: 0;
   }
   .four {
-    bottom: 0vh;
+    bottom: 5vh;
     right: -20vw;
   }
   .five {
@@ -184,7 +184,7 @@
   }
   .six {
     top: 15vh;
-    right: -40vw;
+    right: -25vw;
   }
   .seven {
     display: none;
