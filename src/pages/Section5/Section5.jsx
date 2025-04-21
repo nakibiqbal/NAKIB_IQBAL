@@ -1,5 +1,8 @@
 import "./Section5.css";
 import { useState, useEffect, useRef } from "react";
+import { FaReact } from "react-icons/fa";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiGreensock } from "react-icons/si";
 
 import MainVariant1 from "./Main_Variant1/MainVariant1";
 import MainVariant2 from "./Main_Variant2/MainVariant2";
@@ -50,29 +53,46 @@ const Section5 = () => {
     return (
         <section id="section5">
             <div className="sec5Wrapper">
-                <div className="mainTextVariant1">
+                <div className="mainTextVariant one">
                     <MainVariant1 currentVariant={currentVariant1} />
                 </div>
-                <div className="mainTextVariant2">
+                <div className="mainTextVariant two">
                     <MainVariant2 currentVariant={currentVariant2} />
                 </div>
-                <div className="mainTextVariant3">
+                <div className="mainTextVariant three">
                     <MainVariant3 currentVariant={currentVariant3} />
                 </div>
-                <div className="mainTextVariant4">
+                <div className="mainTextVariant four">
                     <MainVariant4 currentVariant={currentVariant4} />
                 </div>
-                <div className="mainTextVariant5">
+                <div className="mainTextVariant five">
                     <MainVariant5 currentVariant={currentVariant5} />
                 </div>
-                <div className="mainTextVariant6">
+                <div className="mainTextVariant six">
                     <MainVariant6 currentVariant={currentVariant6} />
                 </div>
-                <div className="mainTextVariant7">
+                <div className="mainTextVariant seven">
                     <MainVariant7 currentVariant={currentVariant7} />
                 </div>
-                <div className="mainTextVariant8">
+                <div className="mainTextVariant eight">
                     <MainVariant8 currentVariant={currentVariant8} />
+                </div>
+
+
+                <div className="skillIcons">
+                    <p>
+                        <TbBrandFramerMotion />
+                        <span>Motion</span>
+                    </p>
+                    <p>
+                        <FaReact />
+                        <span>React</span>
+                    </p>
+                    <p>
+                        <SiGreensock />
+                        <span>GSAP</span>
+                    </p>
+
                 </div>
 
             </div>

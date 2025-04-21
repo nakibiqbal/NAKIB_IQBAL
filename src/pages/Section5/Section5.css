@@ -13,98 +13,186 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-.mainTextVariant1 {
+.mainTextVariant {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 15rem;
+}
+.mainTextVariant p {
+  mix-blend-mode: difference;
+}
+.one {
   top: 0vh;
   left: 2vw;
   width: 20rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant2 {
-  position: absolute;
+.two {
   bottom: 10vh;
   left: 5vw;
   width: 23rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant3 {
-  position: absolute;
+.three {
   top: 45vh;
   right: 10vw;
   width: 25rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant4 {
-  position: absolute;
+.four {
   bottom: 0vh;
   right: 2vw;
   width: 26rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant5 {
-  position: absolute;
+.five {
   top: 55vh;
   left: 10vw;
   width: 25rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant6 {
-  position: absolute;
+.six {
   top: 10vh;
   right: 0vw;
   width: 25rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant7 {
-  position: absolute;
+.seven {
   top: 15vh;
   left: 30vw;
   width: 26rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
-.mainTextVariant8 {
-  position: absolute;
+.eight {
   bottom: 15vh;
   right: 30vw;
   width: 25rem;
-  height: 15rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 .forText {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 1.4rem;
+}
+
+/* skills */
+.skillIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.skillIcons p {
+  color: #00ff00;
+  font-size: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  mix-blend-mode: difference;
+  justify-content: center;
+}
+.skillIcons p span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1500px) {
+  .sec5Wrapper {
+    font-size: 1.3vw;
+  }
+  .mainTextVariant {
+    height: 27vh;
+    width: 27vw !important;
+  }
+  .forText {
+    height: 1.6vw;
+  }
+}
+@media (max-width: 1000px) {
+  .sec5Wrapper {
+    font-size: 1.8vw;
+  }
+  .mainTextVariant {
+    width: 38vw !important;
+  }
+  .forText {
+    height: 2.2vw;
+  }
+  .one {
+    top: 0vh;
+    left: 2vw;
+  }
+  .two {
+    bottom: 0vh;
+    left: 5vw;
+  }
+  .three {
+    top: 60vh;
+    right: -15vw;
+  }
+  .four {
+    bottom: 10vh;
+    right: 0vw;
+  }
+
+  .five {
+    top: 45vh;
+    left: 1vw;
+  }
+  .six {
+    top: 15vh;
+    right: 0vw;
+  }
+  .seven {
+    top: 20vh;
+    left: 22vw;
+  }
+  .eight {
+    bottom: 30vh;
+    right: 45vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #section5 {
+    height: 100vh;
+  }
+  .sec5Wrapper {
+    font-size: 14px;
+  }
+  .mainTextVariant {
+    width: 18rem !important;
+    height: 10rem;
+  }
+  .forText {
+    height: 16px;
+  }
+  .one {
+    top: 0vh;
+    left: 10vw;
+  }
+
+  .three {
+    top: 60vh;
+    left: 0;
+  }
+  .four {
+    bottom: 0vh;
+    right: -20vw;
+  }
+  .five {
+    top: 22vh;
+    left: 0;
+  }
+  .six {
+    top: 15vh;
+    right: -40vw;
+  }
+  .seven {
+    display: none;
+  }
+  .eight {
+    display: none;
+  }
+  .two {
+    display: none;
+  }
 }
