@@ -39,11 +39,12 @@ section#section6 {
   align-items: flex-start;
   gap: 1rem;
   padding: 2rem;
-  transition: all 5s ease-out;
-  border: 1px solid rgba(255, 255, 255, 0.072);
+  transition: all 2s ease-out;
+  /* border: 1px solid rgba(255, 255, 255, 0.072); */
+  border: 1px solid green;
 }
 .card-content:hover {
-  border: none;
+  border: 1px solid transparent;
 }
 .card-content h2 {
   font-family: "Pixel Sans Serif";
@@ -57,14 +58,18 @@ section#section6 {
   line-height: 22px;
   color: #cacaca;
 }
-.dynamic-shadow {
-  /* box-shadow: 0 0 220px 60px white; */
-  background: white;
+.shadow {
   width: 9rem;
   height: 9rem;
-  filter: blur(7rem);
-  margin: -4.7rem -4.4rem;
+  background: #00ff00;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
+  filter: blur(7rem);
+  pointer-events: none;
+  opacity: 1;
 }
 
 @media (max-width: 1440px) {

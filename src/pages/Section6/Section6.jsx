@@ -96,17 +96,8 @@ const Section6 = () => {
             {hoveredCardId === card.id && (
               <span
                 style={{
-                  width: "9rem",
-                  height: "9rem",
-                  background: "white",
-                  position: "absolute",
                   left: `${shadowPos.x}px`,
                   top: `${shadowPos.y}px`,
-                  transform: "translate(-50%, -50%)",
-                  borderRadius: "50%",
-                  filter: "blur(7rem)",
-                  pointerEvents: "none",
-                  opacity: 1,
                 }}
                 className="shadow"
               />
