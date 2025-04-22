@@ -74,7 +74,7 @@
 @media (max-width: 500px) {
   .name {
     font-size: 4vw;
-    line-height: 28px;
+    line-height: 6vw;
   }
   .developer {
     font-size: 6vw;

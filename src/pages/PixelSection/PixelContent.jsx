@@ -32,8 +32,8 @@ const PixelContent = () => {
         DEVELOPER
         <AiFillOpenAI className="aiRight" />
       </h1>
-      <h1 className="name">I&apos;M SO MUCH INTERESTED TO LEARN</h1>
-      <h1 className="name">CREATIVE THING&apos;S</h1>
+      <h1 className="name">I LOVE WORKING ON</h1>
+      <h1 className="name">COMPLEX ANIMATION&apos;S</h1>
       <h1 className="name">___OCTOBER, 2024___</h1>
     </div>
   );
