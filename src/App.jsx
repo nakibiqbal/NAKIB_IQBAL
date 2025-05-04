@@ -2,7 +2,6 @@ import "./App.css";
 import Navbar from "./Navbar/Navbar";
 import Contact from "./pages/Contact/Contact";
 import PixelSection from "./pages/PixelSection/PixelSection";
-import Section1 from "./pages/Section1/Section1";
 import Section2 from "./pages/Section2/Section2";
 import Section3 from "./pages/Section3/Section3";
 import Section4 from "./pages/Section4/Section4";
@@ -32,7 +31,6 @@ function App() {
         <Section3 />
         <Section2 />
         <Section4 />
-        <Section1 />
         <Contact />
       </main>
     </>

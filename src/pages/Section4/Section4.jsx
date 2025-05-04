@@ -1,38 +1,39 @@
-import "./section4.css";
-import "./images.css";
-import "./text.css";
-import { useRef } from "react";
 import Images from "./Images";
+import "./Section4.css";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Section4 = () => {
-  const ref4 = useRef(null);
-  const aboutMe = `I'm a self-taught passionate Frontend Developer and I'm a positive dreamer. I cherish a long dream in my heart for doing something better/creative in this sector. InshaAllah (if Allah wills). I'll be able to make better by having codial supports of all well-wishers. I love both programming and designing. I'm also interested in open source, and creative coding projects.`;
-  const { scrollYProgress } = useScroll({ target: ref4, offset: [`start 0%`, "end 100%"], });
+  const parentRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: parentRef, offset: ["start 20%", "end 110%"] });
+  const y = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
 
   return (
-    <section ref={ref4} id="section4">
-      <div className="sec4Wrapper">
-        <Images ref4={ref4} />
+    <section ref={parentRef} id="section4">
 
-        <div className="aboutMe">
-          <div className="mainTxt">
-            {
-              aboutMe.split(" ").map((word, index) => {
-                const WordOpacity = () => useTransform(scrollYProgress, [index * 0.016, (index + 1) * 0.016], [0, 1])
-                return <motion.h1
-                  style={{ opacity: WordOpacity() }}
-                  key={index}>
-                  {word}
-                </motion.h1>
+      <div className="imageWrapper">
 
-              })
-            }
-          </div>
-        </div>
+        <Images parentRef={parentRef} />
+
+        <motion.div style={{ y }} className="texts">
+
+          <p>
+            Creating meaningful and interactive web experiences is at the heart of what I do. As a frontend developer, I enjoy building visually engaging interfaces with smooth user experiences using modern technologies like React and animation libraries. I care deeply about clean design, performance, and making every interaction feel intuitive and enjoyable.
+            <br />
+            <br />
+            I truly believe that to build something awesome, the environment plays a key role. A positive and inspiring atmosphere can elevate your mindset — and that’s when the real magic happens.
+            <br />
+            <br />
+            Outside of coding, I enjoy traveling, exploring new ideas, watching food and travel vlogs, sleeping, and taking time to relax. These moments recharge my creativity and keep me inspired.
+          </p>
+
+        </motion.div>
+
       </div>
+
     </section>
   );
 };
 
 export default Section4;
+
