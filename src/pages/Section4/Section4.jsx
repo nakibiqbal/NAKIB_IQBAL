@@ -1,5 +1,5 @@
 import Images from "./Images";
-import "./Section4.css";
+import "./section4.css";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
