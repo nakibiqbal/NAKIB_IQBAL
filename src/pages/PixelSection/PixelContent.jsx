@@ -37,7 +37,7 @@ const PixelContent = ({ mainRef }) => {
         <AiFillOpenAI className="aiRight" />
       </h1>
       <h1 className="name">I LOVE WORKING ON</h1>
-      <h1 className="name">COMPLEX ANIMATION&apos;S</h1>
+      <h1 className="name">COMPLEX WEB ANIMATION&apos;S</h1>
       <h1 className="name">___OCTOBER, 2024___</h1>
     </motion.div>
   );

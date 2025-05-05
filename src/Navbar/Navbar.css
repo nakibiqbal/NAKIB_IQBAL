@@ -19,6 +19,8 @@
   font-weight: 100;
   font-size: 12px;
   letter-spacing: 2px;
+  position: absolute;
+  top: 40px;
 }
 .parentNavItem {
   width: 100%;
@@ -34,10 +36,11 @@
 .navItem {
   background: transparent;
   position: absolute;
-  top: 2.5vh;
+  top: 32px;
   z-index: 9;
   backdrop-filter: blur(15px);
   overflow: hidden;
+  z-index: 2;
   pointer-events: all;
 }
 .navItems {
@@ -54,6 +57,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 .navItemsChild a {
   text-decoration: none;
@@ -68,4 +72,23 @@
   background-size: cover;
   width: 25rem;
   height: 18rem;
+}
+
+@media (max-width: 812px) {
+  .navItemsChild a {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 500px) {
+  .navItems {
+    justify-content: space-around;
+    gap: 0;
+  }
+  .navItemsChild a {
+    font-size: 1.8rem;
+  }
+  .nakibIqbal {
+    width: 80vw;
+    height: 58vw;
+  }
 }
