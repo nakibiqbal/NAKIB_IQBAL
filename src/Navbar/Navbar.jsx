@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
+import edit2 from "../assets/edit2.jpg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -80,6 +80,7 @@ const Navbar = () => {
                                         </div>
                                         <motion.div
                                             className="nakibIqbal"
+                                            style={{ backgroundImage: `url(${edit2})` }}
                                             initial={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", filter: "blur(20px) grayscale(1)" }} // Hidden at the bottom
                                             animate={{
                                                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", filter: "blur(0px) grayscale(0)", transition: {

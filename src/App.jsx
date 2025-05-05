@@ -8,7 +8,7 @@ import Section4 from "./pages/Section4/Section4";
 import Section5 from "./pages/Section5/Section5";
 import Section6 from "./pages/Section6/Section6";
 import useLenis from "./useLenis";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 function App() {
   useLenis();
