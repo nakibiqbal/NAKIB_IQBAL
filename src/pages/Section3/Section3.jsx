@@ -4,7 +4,6 @@ import { GoArrowUpRight } from "react-icons/go";
 
 import "./section3.css";
 import { Magnet } from "./Magnet";
-import HeadingText from "../../HeadingText_DY/HeadingText";
 import useCustomHook from "../../hooks/CustomHook/useCustomHook";
 import { ListData } from "./ListData";
 
@@ -35,9 +34,6 @@ function Section3() {
   return (
     <>
       <section id="image_reveal">
-        {/* heading starts */}
-        <HeadingText heading1="Explore" heading2="My Works" />
-        {/* heading ends */}
         <div className="section3Content">
           {list.map((item) => {
             return (

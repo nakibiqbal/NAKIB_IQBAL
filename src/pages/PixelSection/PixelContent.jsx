@@ -1,11 +1,15 @@
 import { AiFillOpenAI } from "react-icons/ai";
-import useCustomHook from "../../hooks/CustomHook/useCustomHook";
+import { motion, useScroll, useTransform } from "framer-motion";
 
-const PixelContent = () => {
-  const { opacityS } = useCustomHook();
+const PixelContent = ({ mainRef }) => {
+  const { scrollYProgress } = useScroll({
+    target: mainRef,
+    offset: ["end end", "end center"],
+  })
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
   return (
-    <div
+    <motion.div
       style={{
         display: "flex",
         justifyContent: "center",
@@ -16,8 +20,8 @@ const PixelContent = () => {
         textAlign: "center",
         pointerEvents: "none",
         overflow: "hidden",
+        opacity
       }}
-      id={opacityS}
     >
       <iframe
         src="https://giphy.com/embed/npY8OaCJcdGvBw2GtM"
@@ -35,7 +39,7 @@ const PixelContent = () => {
       <h1 className="name">I LOVE WORKING ON</h1>
       <h1 className="name">COMPLEX ANIMATION&apos;S</h1>
       <h1 className="name">___OCTOBER, 2024___</h1>
-    </div>
+    </motion.div>
   );
 };
 

@@ -16,14 +16,14 @@ function App() {
   return (
     <>
       <main>
-        <div className="openToWork">
+        {/* <div className="openToWork">
           <motion.span
-            initial={{ boxShadow: "0 0 0 0px rgba(255, 255, 0, 0.330)" }}
-            animate={{ boxShadow: "0 0 0 8px rgba(255, 255, 0, 0.330)" }}
+            initial={{ boxShadow: "0 0 0 0px green" }}
+            animate={{ boxShadow: "0 0 0 8px green" }}
             transition={{ repeat: Infinity, repeatType: "reverse", duration: 1 }}
           ></motion.span>
           <p>OPEN TO WORK</p>
-        </div>
+        </div> */}
         <Navbar />
         <PixelSection />
         <Section5 />

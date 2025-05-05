@@ -4,7 +4,14 @@ import "./Variant5.css";
 
 const TextAnim5 = ({ text, delay, repeatDelay, staggerDelay }) => {
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+                duration: 0.05,
+                delay: 1.4,
+            }}
+
             className='forText txt5'>
             {
                 text.split("").map((word, wordIndex) => (
@@ -24,7 +31,7 @@ const TextAnim5 = ({ text, delay, repeatDelay, staggerDelay }) => {
                     </motion.p>
                 ))
             }
-        </div>
+        </motion.div>
     );
 };
 

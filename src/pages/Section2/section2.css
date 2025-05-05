@@ -10,12 +10,13 @@
   overflow: hidden;
 }
 .textBGwrapper h1 {
-  color: blue;
+  color: #00c500;
   font-size: 9vw;
   width: 265vw;
   animation: animate 20s linear infinite;
   font-weight: 100;
   font-family: "Blockstepped";
+  text-shadow: -30px -30px 19px #025802;
 }
 @keyframes animate {
   0% {

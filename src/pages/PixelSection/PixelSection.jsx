@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import "./PixelSection.css";
 import PixelContent from "./PixelContent";
@@ -5,6 +6,8 @@ import useCustomHook from "../../hooks/CustomHook/useCustomHook";
 
 const PixelSection = () => {
   const { boxCount } = useCustomHook();
+  const mainRef = useRef(null);
+
   return (
     <section
       style={{
@@ -16,6 +19,7 @@ const PixelSection = () => {
         position: "relative",
         overflow: "hidden",
       }}
+      ref={mainRef}
     >
       {/* Hover grid */}
       <div
@@ -42,7 +46,7 @@ const PixelSection = () => {
       </div>
 
       {/* Content overlay */}
-      <PixelContent />
+      <PixelContent mainRef={mainRef} />
     </section>
   );
 };

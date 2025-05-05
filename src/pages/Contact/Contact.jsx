@@ -2,7 +2,6 @@ import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform, animate } from "framer-motion";
 import { FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import './Contact.css'; // Import the custom CSS file
-import HeadingText from "../../HeadingText_DY/HeadingText";
 
 const SCALE = 1.7; // max scale factor of an icon
 const DISTANCE = 120; // pixels before mouse affects an icon
@@ -67,7 +66,6 @@ function Contact() {
 
                 <div className="CLinks">
 
-                    <HeadingText heading1="Lets" heading2="Connect" />
                     <motion.div
                         onMouseMove={(e) => {
                             const { left, right } = e.currentTarget.getBoundingClientRect();

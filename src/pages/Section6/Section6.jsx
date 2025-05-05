@@ -2,7 +2,6 @@ import { useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Section6.css";
-import HeadingText from "../../HeadingText_DY/HeadingText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,9 +76,6 @@ const Section6 = () => {
 
   return (
     <section id="section6">
-      {/* heading starts */}
-      <HeadingText heading1="What" heading2="I Serve" />
-      {/* heading ends */}
       <div className="cardContainer">
         {cardData.map((card) => (
 
