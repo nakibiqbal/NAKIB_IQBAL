@@ -5,7 +5,7 @@
   align-items: center;
   padding: 2rem 0;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
 }
 .navbar button {
   width: 6rem;
@@ -13,7 +13,7 @@
   background: rgb(0 80 0 / 40%);
   color: #00ff00;
   cursor: pointer;
-  z-index: 10;
+  z-index: 9999;
   border: 1px solid #00ff00bf;
   font-family: "Pixel Sans Serif";
   font-weight: 100;
@@ -23,15 +23,22 @@
   top: 40px;
 }
 .parentNavItem {
+  position: fixed;
+  z-index: 999;
   width: 100%;
   height: 100vh;
-  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* pointer-events: none; */
+  transition: all 1s cubic-bezier(0.87, 0, 0.13, 1);
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  transition: all 1s cubic-bezier(0.87, 0, 0.13, 1);
 }
+/* 
+.parentNavItem.active {
+  pointer-events: all;
+} */
 
 .navItem {
   background: transparent;
@@ -64,6 +71,9 @@
   font-family: "Pixel Sans Serif";
   color: #00ff00;
   font-size: 3rem;
+  white-space: nowrap;
+  height: 5rem;
+  overflow: hidden;
 }
 
 .nakibIqbal {
@@ -77,15 +87,31 @@
 @media (max-width: 812px) {
   .navItemsChild a {
     font-size: 2.2rem;
+    height: 4rem;
   }
 }
 @media (max-width: 500px) {
+  .navbar {
+    justify-content: flex-end;
+    padding: 2rem 1.5rem;
+  }
+  .navbar button {
+    width: 5rem;
+    height: 2rem;
+    font-size: 10px;
+    top: 30px;
+  }
+  .navItem {
+    top: 21px;
+    right: -8px;
+  }
   .navItems {
     justify-content: space-around;
-    gap: 0;
   }
   .navItemsChild a {
-    font-size: 1.8rem;
+    font-size: 4vh;
+    height: 6vh;
+    color: #00ff00 !important;
   }
   .nakibIqbal {
     width: 80vw;
