@@ -2,6 +2,7 @@
   width: 100%;
   height: 130vh;
   position: relative;
+  overflow: hidden;
 }
 .sec5Wrapper {
   height: 100%;
@@ -92,6 +93,18 @@
 .skillIcons p span {
   font-size: 1rem;
   font-weight: bold;
+}
+
+.imgBgTwoParent {
+  position: absolute;
+  right: -15rem;
+  top: 0%;
+  transform: rotateZ(45deg);
+}
+img.bgImgTwo {
+  width: 43rem;
+  filter: blur(80px) hue-rotate(90deg) contrast(2.5) brightness(2.5);
+  pointer-events: none;
 }
 
 @media (max-width: 1500px) {
@@ -197,5 +210,13 @@
   }
   .skillIcons {
     transform: translateY(3rem);
+  }
+
+  .imgBgTwoParent {
+    right: -15rem;
+    top: -2rem;
+  }
+  img.bgImgTwo {
+    width: 40rem;
   }
 }

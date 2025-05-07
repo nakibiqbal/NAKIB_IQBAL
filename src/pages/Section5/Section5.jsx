@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { FaReact } from "react-icons/fa";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { SiGreensock } from "react-icons/si";
+import designA3 from "../../assets/designA3.png"
+
 
 import MainVariant1 from "./Main_Variant1/MainVariant1";
 import MainVariant2 from "./Main_Variant2/MainVariant2";
@@ -52,6 +54,11 @@ const Section5 = () => {
 
     return (
         <section id="section5">
+
+            <div className="imgBgTwoParent">
+                <img src={designA3} className="bgImgTwo" alt="Background" />
+            </div>
+
             <div className="sec5Wrapper">
                 <div className="mainTextVariant one">
                     <MainVariant1 currentVariant={currentVariant1} />

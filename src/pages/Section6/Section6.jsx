@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { motion, useScroll, useTransform } from "framer-motion"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Section6.css";
+import designA1 from "../../assets/designA1.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +42,8 @@ const Section6 = () => {
     setHoveredCardId(null);
   };
 
+
+
   const cardData = [
     {
       id: 1,
@@ -72,10 +76,37 @@ const Section6 = () => {
     },
   ];
 
+  // For small screen size
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
+
+  // Update state on screen resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 500);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const secRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: secRef,
+    offset: ["start end", "end center"]
+  })
+  const y = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? -100 : -300, isSmallScreen ? 700 : 200])
 
 
   return (
-    <section id="section6">
+    <section ref={secRef} id="section6">
+      <motion.div style={{ y }} className="bgImgParent">
+        <img
+          src={designA1} className="bgOne" alt="Background" />
+      </motion.div>
       <div className="cardContainer">
         {cardData.map((card) => (
 

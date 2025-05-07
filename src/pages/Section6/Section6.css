@@ -72,6 +72,32 @@ section#section6 {
   opacity: 1;
 }
 
+.bgImgParent {
+  width: 100%;
+  z-index: -1;
+}
+img.bgOne {
+  width: 40rem;
+  position: absolute;
+  top: -5%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform;
+  animation: bgOne 20s linear infinite;
+}
+@keyframes bgOne {
+  0% {
+    filter: hue-rotate(200deg) blur(30px);
+  }
+  50% {
+    filter: hue-rotate(300deg) blur(50px);
+  }
+  100% {
+    filter: hue-rotate(200deg) blur(30px);
+  }
+}
+
 @media (max-width: 1440px) {
   section#section6 {
     height: 100%;
@@ -101,5 +127,8 @@ section#section6 {
   }
   .card-content p {
     font-size: 18px;
+  }
+  img.bgOne {
+    left: -10%;
   }
 }

@@ -17,7 +17,7 @@ const Navbar = () => {
 
 
     // For small screen size
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 812);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
 
     // Update state on screen resize
     useEffect(() => {

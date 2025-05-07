@@ -35,10 +35,6 @@
   justify-content: center;
   align-items: center;
 }
-/* 
-.parentNavItem.active {
-  pointer-events: all;
-} */
 
 .navItem {
   background: transparent;
