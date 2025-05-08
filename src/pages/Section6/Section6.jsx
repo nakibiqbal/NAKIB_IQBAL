@@ -98,7 +98,7 @@ const Section6 = () => {
     target: secRef,
     offset: ["start end", "end center"]
   })
-  const y = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? -100 : -300, isSmallScreen ? 700 : 200])
+  const y = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? -100 : -200, isSmallScreen ? 700 : 200])
 
 
   return (

@@ -75,6 +75,7 @@ section#section6 {
 .bgImgParent {
   width: 100%;
   z-index: -1;
+  position: relative;
 }
 img.bgOne {
   width: 40rem;
@@ -85,6 +86,7 @@ img.bgOne {
   pointer-events: none;
   will-change: transform;
   animation: bgOne 20s linear infinite;
+  mix-blend-mode: difference;
 }
 @keyframes bgOne {
   0% {
@@ -95,6 +97,12 @@ img.bgOne {
   }
   100% {
     filter: hue-rotate(200deg) blur(30px);
+  }
+}
+
+@media (min-width: 1920px) {
+  img.bgOne {
+    width: 35vw;
   }
 }
 

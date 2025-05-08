@@ -29,7 +29,6 @@
   height: 100vh;
   top: 0;
   background: rgba(0, 0, 0, 0.6);
-  /* pointer-events: none; */
   transition: all 1s cubic-bezier(0.87, 0, 0.13, 1);
   display: flex;
   justify-content: center;
@@ -80,13 +79,11 @@
   height: 18rem;
 }
 
-@media (max-width: 812px) {
+@media (max-width: 1538px) {
   .navItemsChild a {
     font-size: 2.2rem;
     height: 4rem;
   }
-}
-@media (max-width: 500px) {
   .navbar {
     justify-content: flex-end;
     padding: 2rem 1.5rem;
@@ -103,12 +100,15 @@
   }
   .navItems {
     justify-content: space-around;
+    gap: 0;
   }
   .navItemsChild a {
     font-size: 4vh;
     height: 6vh;
     color: #00ff00 !important;
   }
+}
+@media (max-width: 500px) {
   .nakibIqbal {
     width: 80vw;
     height: 58vw;

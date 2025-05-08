@@ -6,23 +6,17 @@ import "./Navbar.css";
 import Items from "./Items";
 
 const Navbar = () => {
-    // const navData = [
-    //     { item: "Skills", section: "#section5", id: 1 },
-    //     { item: "Services", section: "#section6", id: 2 },
-    //     { item: "Projects", section: "#image_reveal", id: 3 },
-    //     { item: "About", section: "#section4", id: 4 },
-    //     { item: "Contact", section: "#ContactSection", id: 5 },
-    // ]
+
     const [isClick, setIsClick] = useState(false);
 
 
     // For small screen size
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1538);
 
     // Update state on screen resize
     useEffect(() => {
         const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 500);
+            setIsSmallScreen(window.innerWidth <= 1538);
         };
 
         window.addEventListener("resize", handleResize);
@@ -54,7 +48,7 @@ const Navbar = () => {
                         // onClick={() => setIsClick(false)} // Close the menu when clicking outside
                         className="parentNavItem"
                         style={{
-                            background: isClick ? "#000000a6" : "transparent",
+                            background: isClick ? "rgb(0 0 0 / 70%)" : "transparent",
                             pointerEvents: isClick ? "all" : "none"
                         }}
                     >
@@ -72,7 +66,7 @@ const Navbar = () => {
                         }
                         <motion.nav
                             animate={{
-                                width: isClick ? (isSmallScreen ? "93.5%" : "48rem") : (isSmallScreen ? "6rem" : "7rem"),
+                                width: isClick ? (isSmallScreen ? "90%" : "48rem") : (isSmallScreen ? "6rem" : "7rem"),
                                 height: isClick ? (isSmallScreen ? "92%" : "95%") : (isSmallScreen ? "3.1rem" : "3.5rem"),
                                 border: isClick ? "1px solid #00ff00bf" : "1px dashed #00ff00bf",
                             }}

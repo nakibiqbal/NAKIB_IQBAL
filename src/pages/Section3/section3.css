@@ -1,103 +1,62 @@
 #image_reveal {
   width: 100%;
-  height: 100%;
+  height: 800px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
   position: relative;
-  z-index: 9;
-  padding: 10rem 0rem;
 }
 .section3Content {
   list-style: none;
   width: 90%;
-  height: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 999;
   padding: 1rem;
-  gap: 1rem;
+  position: relative;
 }
 .sec3Wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 60px;
   border-bottom: 1px solid #ffffff4d;
   color: white;
-}
-.hovered_img {
-  width: 300px;
-  height: 500px;
-  border-radius: 10px;
-  object-fit: cover;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: opacity 200ms ease-in-out;
-  pointer-events: none;
-  filter: brightness(0.8);
-}
-.sec3Wrapper button {
-  border: none;
-  background: transparent;
-  position: relative;
-}
-.sec3Wrapper button:hover {
-  background: green;
-  color: black;
-}
-
-.sec3Wrapper button:hover::before {
-  background: green;
-}
-
-.sec3Wrapper svg {
-  background: #0080003d;
-  cursor: pointer;
-  width: 70px;
-  height: 70px;
-  color: white;
-  padding: 1rem;
-  position: relative;
-}
-
-.items {
-  display: flex;
   overflow: hidden;
-}
-.flipTextParent {
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s ease;
 }
 .FlipTextChild {
   display: flex;
   flex-direction: column;
-  height: 30px;
+  height: 100%;
+  transform: translateY(0%);
+  transition: transform 0.4s ease;
+}
+.sec3Wrapper:hover .FlipTextChild {
+  transform: translateY(-100%);
 }
 .FlipTextChild h2 {
   font-size: 28px;
   font-family: "Quicksand";
-  line-height: 28px;
+  line-height: 60px;
   font-weight: 100;
 }
-.dekhitoii {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+.imgBgThreeParent {
+  position: absolute;
+  right: -17rem;
+  top: -20rem;
 }
+img.bgImgThree {
+  width: 40rem;
+  transform: rotate(170deg);
+}
+
 @media (max-width: 1200px) {
   .section3Content {
     width: 100%;
@@ -118,11 +77,6 @@
     gap: 0;
     height: 10rem;
   }
-  .sec3Wrapper svg {
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
-  }
 }
 @media (max-width: 500px) {
   #image_reveal {
@@ -137,15 +91,6 @@
   .sec3Wrapper {
     justify-content: space-evenly;
     height: 7rem;
-  }
-  .sec3Wrapper svg {
-    width: 45px;
-    height: 45px;
-    padding: 0.5rem;
-  }
-  .hovered_img {
-    width: 200px;
-    height: 400px;
   }
   .FlipTextChild {
     display: flex;

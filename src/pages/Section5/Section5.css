@@ -97,9 +97,9 @@
 
 .imgBgTwoParent {
   position: absolute;
-  right: -15rem;
-  top: 0%;
-  transform: rotateZ(45deg);
+  right: -10%;
+  top: 47%;
+  transform: rotateZ(45deg) translate(-50%, -50%);
 }
 img.bgImgTwo {
   width: 43rem;
@@ -107,6 +107,11 @@ img.bgImgTwo {
   pointer-events: none;
 }
 
+@media (min-width: 1920px) {
+  img.bgImgTwo {
+    width: 40vw;
+  }
+}
 @media (max-width: 1500px) {
   .sec5Wrapper {
     font-size: 1.3vw;
@@ -162,6 +167,10 @@ img.bgImgTwo {
     bottom: 30vh;
     right: 45vw;
   }
+  .imgBgTwoParent {
+    right: -12rem;
+    top: 32rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -210,13 +219,5 @@ img.bgImgTwo {
   }
   .skillIcons {
     transform: translateY(3rem);
-  }
-
-  .imgBgTwoParent {
-    right: -15rem;
-    top: -2rem;
-  }
-  img.bgImgTwo {
-    width: 40rem;
   }
 }
