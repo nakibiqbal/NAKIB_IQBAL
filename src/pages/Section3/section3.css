@@ -29,29 +29,42 @@
   color: white;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.4s linear;
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .FlipTextChild {
   display: flex;
   flex-direction: column;
   height: 100%;
   transform: translateX(0px);
-  transition: all 0.4s linear;
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
   justify-content: center;
 }
 .sec3Wrapper:hover .FlipTextChild {
   transform: translateX(50px);
 }
-.sec3Wrapper:hover .FlipTextChild h2 {
-  color: white;
+.sec3Wrapper:hover .FlipTextChild h2::after {
+  transform: scaleX(1);
 }
 .FlipTextChild h2 {
   font-weight: 100;
-  color: #ffffff99;
+  color: green;
   font-family: "Pixel Sans Serif";
   font-size: 20px;
-  transition: all 0.4s linear;
+  position: relative;
 }
+.FlipTextChild h2::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  background: green;
+  transform: scaleX(0);
+  transform-origin: right;
+  right: 0;
+  mix-blend-mode: difference;
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
 .imgBgThreeParent {
   position: absolute;
   right: -4rem;
