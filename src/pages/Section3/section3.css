@@ -29,34 +29,38 @@
   color: white;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.4s ease;
+  transition: all 0.4s linear;
 }
 .FlipTextChild {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transform: translateY(0%);
-  transition: transform 0.4s ease;
+  transform: translateX(0px);
+  transition: all 0.4s linear;
+  justify-content: center;
 }
 .sec3Wrapper:hover .FlipTextChild {
-  transform: translateY(-100%);
+  transform: translateX(50px);
+}
+.sec3Wrapper:hover .FlipTextChild h2 {
+  color: white;
 }
 .FlipTextChild h2 {
-  font-size: 28px;
-  font-family: "Quicksand";
-  line-height: 60px;
   font-weight: 100;
+  color: #ffffff99;
+  font-family: "Pixel Sans Serif";
+  font-size: 20px;
+  transition: all 0.4s linear;
 }
 .imgBgThreeParent {
   position: absolute;
-  right: -17rem;
+  right: -4rem;
   top: -20rem;
 }
 img.bgImgThree {
   width: 40rem;
-  transform: rotate(170deg);
+  transform: rotate(105deg);
 }
-
 @media (max-width: 1200px) {
   .section3Content {
     width: 100%;

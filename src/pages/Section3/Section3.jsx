@@ -32,19 +32,9 @@ function Section3() {
         <div className="section3Content">
           {list.map((item) => {
             return (
-              <div
-                key={item.id}
-                className="sec3Wrapper"
-              >
-                <div
-                  className="FlipTextChild"
-                >
-                  <h2 style={{ color: "#ffffff94" }}>{item.label}</h2>
-                  <h2 style={{
-                    color: "white",
-                    fontFamily: "Pixel Sans Serif",
-                    fontSize: "18px",
-                  }}>{item.label}</h2>
+              <div key={item.id} className="sec3Wrapper">
+                <div className="FlipTextChild">
+                  <h2>{item.label}</h2>
                 </div>
               </div>
             );
