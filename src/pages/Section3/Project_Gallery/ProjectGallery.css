@@ -1,0 +1,32 @@
+.galleryContainer {
+  width: 24rem;
+  height: 18rem;
+  position: absolute;
+  overflow: hidden;
+  background: green;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallerySlider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.8s cubic-bezier(0.87, 0, 0.13, 1);
+}
+.galleryImages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: green;
+  padding: 2rem;
+}
+.galleryImages img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

@@ -4,6 +4,7 @@ import designA3 from "../../assets/designA3.png"
 
 import "./section3.css";
 import { ListData } from "./ListData";
+import ProjectGallery from "./Project_Gallery/ProjectGallery";
 
 function Section3() {
   const [list] = useState(ListData);
@@ -19,6 +20,8 @@ function Section3() {
   // MotionTemplate used because hue will be gone to a string.
   const filter = useMotionTemplate`hue-rotate(${hue}deg) blur(20px)`;
 
+  const [modal, setModal] = useState({ active: false, index: 0 })
+
   return (
     <>
       <section ref={secRef} id="image_reveal">
@@ -28,9 +31,10 @@ function Section3() {
         </motion.div>
 
         <div className="section3Content">
-          {list.map((item) => {
+          {list.map((item, index) => {
             return (
-              <motion.div key={item.id} className="sec3Wrapper">
+              <motion.div key={item.id} className="sec3Wrapper" onMouseEnter={() => setModal({ active: true, index: index })} onMouseLeave={() => setModal({ active: false, index: index })}>
+
                 <motion.div
                   className="scaleX"
                   initial={{ scaleX: 0.001, }}
@@ -48,6 +52,9 @@ function Section3() {
               </motion.div>);
           })}
         </div>
+
+        <ProjectGallery list={list} modal={modal} />
+
       </section>
     </>
   );
