@@ -24,20 +24,28 @@ function Section3() {
       <section ref={secRef} id="image_reveal">
 
         <motion.div style={{ y }} className="imgBgThreeParent">
-          <motion.img style={{
-            filter,
-          }} src={designA3} className="bgImgThree" alt="Background" />
+          <motion.img style={{ filter }} src={designA3} className="bgImgThree" alt="Background" />
         </motion.div>
 
         <div className="section3Content">
           {list.map((item) => {
             return (
-              <div key={item.id} className="sec3Wrapper">
+              <motion.div key={item.id} className="sec3Wrapper">
+                <motion.div
+                  className="scaleX"
+                  initial={{ scaleX: 0.001, }}
+                  whileInView={{ scaleX: 1, }}
+                  transition={{
+                    duration: 1,
+                    delay: item.id * 0.08,
+                    ease: [0.87, 0, 0.13, 1],
+                  }}
+                />
+
                 <div className="FlipTextChild">
                   <h2>{item.label}</h2>
                 </div>
-              </div>
-            );
+              </motion.div>);
           })}
         </div>
       </section>
