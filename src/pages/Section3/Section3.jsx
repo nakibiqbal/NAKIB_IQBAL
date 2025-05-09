@@ -32,7 +32,7 @@ function Section3() {
         </motion.div>
 
         <div ref={hoverEl} className="section3Content">
-          <ProjectContent setModal={setModal} list={list} />
+          <ProjectContent setModal={setModal} list={list} hoverEl={hoverEl} />
         </div>
 
         <ProjectGallery list={list} modal={modal} hoverEl={hoverEl} />

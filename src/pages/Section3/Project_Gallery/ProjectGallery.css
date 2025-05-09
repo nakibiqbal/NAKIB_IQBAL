@@ -30,3 +30,23 @@
   width: 100%;
   object-fit: cover;
 }
+
+.viewCursorBG,
+.viewCursorTxt {
+  background: green;
+  color: black;
+  font-size: 18px;
+  width: 100px;
+  height: 70px;
+  text-decoration: none;
+  font-family: "Pixel Sans Serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.viewCursorTxt {
+  background: transparent;
+}

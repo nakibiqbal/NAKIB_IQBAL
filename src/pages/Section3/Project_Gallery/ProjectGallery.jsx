@@ -15,11 +15,19 @@ const scaleAnimation = {
 const ProjectGallery = ({ list, modal, hoverEl }) => {
     const { active, index } = modal;
     const galleryContainer = useRef(null);
+    const viewCursorBG = useRef(null);
+    const viewCursorTxt = useRef(null);
 
     useGSAP(() => {
         //Move Container
         let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.6, ease: "power3" })
         let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.6, ease: "power3" })
+        // Move Viewing Cursor Bg
+        let xCursorMoveBG = gsap.quickTo(viewCursorBG.current, "left", { duration: 0.4, ease: "power3" })
+        let yCursorMoveBG = gsap.quickTo(viewCursorBG.current, "top", { duration: 0.4, ease: "power3" })
+        // Move Viewing Cursor Txt
+        let xCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "left", { duration: 0.2, ease: "power3" })
+        let yCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "top", { duration: 0.2, ease: "power3" })
 
         const hoverArea = hoverEl.current;
 
@@ -27,29 +35,46 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
             const { clientX, clientY } = e;
             xMoveContainer(clientX);
             yMoveContainer(clientY);
+            xCursorMoveBG(clientX);
+            yCursorMoveBG(clientY);
+            xCursorMoveTxt(clientX);
+            yCursorMoveTxt(clientY);
         };
 
         hoverArea.addEventListener('mousemove', handleMouseMove)
 
         return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
-    }, { scope: galleryContainer });
+    }, { scope: [galleryContainer, viewCursorBG] });
 
     return (
-        <motion.div ref={galleryContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="galleryContainer" >
+        <>
 
-            <div style={{ top: index * -100 + "%" }} className="gallerySlider">
+            <motion.div
+                ref={galleryContainer}
+                variants={scaleAnimation}
+                initial="initial"
+                animate={active ? "enter" : "closed"}
+                className="galleryContainer"
+            >
 
-                {
-                    list.map(({ img }, index) => {
-                        return <div key={index} className="galleryImages" >
-                            <img src={img} alt="PROJECT GALLERY" />
-                        </div>
-                    })
-                }
+                <div style={{ top: index * -100 + "%" }} className="gallerySlider">
 
-            </div>
+                    {
+                        list.map(({ img }, index) => {
+                            return <div key={index} className="galleryImages" >
+                                <img src={img} alt="PROJECT GALLERY" />
+                            </div>
+                        })
+                    }
 
-        </motion.div>
+                </div>
+
+            </motion.div>
+
+            <div ref={viewCursorBG} className="viewCursorBG" />
+            <p ref={viewCursorTxt} className="viewCursorTxt">View</p>
+
+        </>
     )
 }
 
