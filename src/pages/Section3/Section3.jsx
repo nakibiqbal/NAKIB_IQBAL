@@ -9,7 +9,8 @@ import ProjectGallery from "./Project_Gallery/ProjectGallery";
 function Section3() {
   const [list] = useState(ListData);
 
-  const secRef = useRef(null)
+  const secRef = useRef(null);
+  const hoverEl = useRef(null);
   const { scrollYProgress } = useScroll({
     target: secRef,
     offset: ["start end", "end start"],
@@ -20,7 +21,7 @@ function Section3() {
   // MotionTemplate used because hue will be gone to a string.
   const filter = useMotionTemplate`hue-rotate(${hue}deg) blur(20px)`;
 
-  const [modal, setModal] = useState({ active: false, index: 0 })
+  const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
     <>
@@ -33,7 +34,7 @@ function Section3() {
         <div className="section3Content">
           {list.map((item, index) => {
             return (
-              <motion.div key={item.id} className="sec3Wrapper" onMouseEnter={() => setModal({ active: true, index: index })} onMouseLeave={() => setModal({ active: false, index: index })}>
+              <motion.div key={item.id} ref={hoverEl} className="sec3Wrapper" onMouseEnter={() => setModal({ active: true, index: index })} onMouseLeave={() => setModal({ active: false, index: index })}>
 
                 <motion.div
                   className="scaleX"
@@ -53,7 +54,7 @@ function Section3() {
           })}
         </div>
 
-        <ProjectGallery list={list} modal={modal} />
+        <ProjectGallery list={list} modal={modal} hoverEl={hoverEl} />
 
       </section>
     </>
