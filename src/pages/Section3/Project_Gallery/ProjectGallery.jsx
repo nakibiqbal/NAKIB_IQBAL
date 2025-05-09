@@ -25,10 +25,9 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
             yMoveContainer(clientY);
         };
 
-
         hoverArea.addEventListener('mousemove', handleMouseMove)
 
-        return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
+        // return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
     }, [])
 
     return (

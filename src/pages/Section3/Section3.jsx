@@ -31,10 +31,10 @@ function Section3() {
           <motion.img style={{ filter }} src={designA3} className="bgImgThree" alt="Background" />
         </motion.div>
 
-        <div className="section3Content">
+        <div ref={hoverEl} className="section3Content">
           {list.map((item, index) => {
             return (
-              <motion.div key={item.id} ref={hoverEl} className="sec3Wrapper" onMouseEnter={() => setModal({ active: true, index: index })} onMouseLeave={() => setModal({ active: false, index: index })}>
+              <motion.div key={item.id} className="sec3Wrapper" onMouseEnter={() => setModal({ active: true, index: index })} onMouseLeave={() => setModal({ active: false, index: index })}>
 
                 <motion.div
                   className="scaleX"
