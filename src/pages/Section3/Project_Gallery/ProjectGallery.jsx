@@ -1,21 +1,25 @@
+/* eslint-disable react/prop-types */
+import { useRef } from "react";
 import { motion } from "framer-motion"
-import "./ProjectGallery.css"
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(useGSAP);
+import "./ProjectGallery.css"
 
 const scaleAnimation = {
     initial: { scale: 0, x: "-50%", y: "-50%" },
     enter: { scale: 1, x: "-50%", y: "-50%", transition: { duration: 0.6, ease: [0.87, 0, 0.13, 1] } },
     closed: { scale: 0, x: "-50%", y: "-50%", transition: { duration: 0.6, ease: [0.87, 0, 0.13, 1] } }
 }
+
 const ProjectGallery = ({ list, modal, hoverEl }) => {
     const { active, index } = modal;
-    const galleryContainer = useRef(null)
+    const galleryContainer = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         //Move Container
-        let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.8, ease: "power3" })
-        let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.8, ease: "power3" })
+        let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.6, ease: "power3" })
+        let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.6, ease: "power3" })
 
         const hoverArea = hoverEl.current;
 
@@ -27,8 +31,8 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
 
         hoverArea.addEventListener('mousemove', handleMouseMove)
 
-        // return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
-    }, [])
+        return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
+    }, { scope: galleryContainer });
 
     return (
         <motion.div ref={galleryContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className="galleryContainer" >

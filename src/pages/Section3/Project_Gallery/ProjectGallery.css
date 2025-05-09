@@ -1,7 +1,7 @@
 .galleryContainer {
-  width: 24rem;
-  height: 18rem;
-  position: absolute;
+  width: 35rem;
+  height: 20rem;
+  position: fixed;
   overflow: hidden;
   background: green;
   pointer-events: none;
