@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Section4 = () => {
   const parentRef = useRef(null);
-  const pCurrent = parentRef.current;
 
   const { scrollYProgress } = useScroll({ target: parentRef, offset: ["start 20%", "end 110%"] });
   const y = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
@@ -15,7 +14,7 @@ const Section4 = () => {
 
       <div className="imageWrapper">
 
-        <Images pCurrent={pCurrent} />
+        <Images parentRef={parentRef} />
 
         <motion.div style={{ y }} className="texts">
 
