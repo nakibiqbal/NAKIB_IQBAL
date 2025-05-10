@@ -28,7 +28,7 @@ function App() {
         <PixelSection />
         <Section5 />
         <Section6 />
-        <Section3 />
+        {/* <Section3 /> */}
         <Section2 />
         <Section4 />
         <Contact />
