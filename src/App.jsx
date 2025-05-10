@@ -27,8 +27,8 @@ function App() {
         <Navbar />
         <PixelSection />
         <Section5 />
-        <Section3 />
         <Section6 />
+        <Section3 />
         <Section2 />
         <Section4 />
         <Contact />
