@@ -26,8 +26,17 @@ const ProjectContent = ({ setModal, list }) => {
                         />
 
                         <div className="FlipTextChild">
+
                             <h2>{item.label}</h2>
+
+                            <img src={item.img} />
+
+                            <div className="viewCursorBG viewBtn">
+                                <a href="#">View</a>
+                            </div>
+
                         </div>
+
 
                     </motion.div>
                 );

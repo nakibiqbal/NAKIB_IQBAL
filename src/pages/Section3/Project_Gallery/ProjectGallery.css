@@ -58,3 +58,12 @@
   background: transparent;
   mix-blend-mode: normal;
 }
+
+@media (max-width: 982px) {
+  .parentBG,
+  .galleryContainer,
+  .viewCursorBG,
+  .viewCursorTxt {
+    display: none;
+  }
+}

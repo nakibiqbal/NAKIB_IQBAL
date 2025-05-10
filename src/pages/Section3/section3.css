@@ -46,9 +46,22 @@ img.bgImgThree {
     width: 100%;
   }
 }
-
-@media (max-width: 500px) {
+@media (max-width: 982px) {
   #image_reveal {
-    height: 1000px;
+    height: 100%;
+    padding: 10rem 0rem;
+  }
+  .section3Content {
+    gap: 2rem;
+  }
+  .imgBgThreeParent {
+    right: -7rem;
+    top: -15rem;
+  }
+  img.bgImgThree {
+    width: 30rem;
+  }
+  .imgBgFourParent {
+    left: -20rem;
   }
 }

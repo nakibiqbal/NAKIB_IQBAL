@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 import ProjectGallery from "./Project_Gallery/ProjectGallery";
 import ProjectContent from "./Project_Content/ProjectContent";
@@ -10,15 +10,33 @@ import designA4 from "../../assets/designA4.png"
 function Section3() {
   const [list] = useState(ListData);
 
+
+  // For small screen size
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 982);
+
+  // Update state on screen resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 982);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const secRef = useRef(null);
   const hoverEl = useRef(null);
   const { scrollYProgress } = useScroll({
     target: secRef,
     offset: ["start end", "end start"],
   })
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 600])
-  const yReverse = useTransform(scrollYProgress, [0, 1], [600, -1000])
-  const hue = useTransform(scrollYProgress, [0, 1], [150, 80])
+  const y = useTransform(scrollYProgress, [0, 1], [-200, isSmallScreen ? 3000 : 600])
+  const yReverse = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? 3000 : 600, isSmallScreen ? -1000 : -1000])
+  const hue = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? 200 : 150, isSmallScreen ? 50 : 80])
   const rotate = useTransform(scrollYProgress, [0, 1], [360, -360])
 
   // MotionTemplate used because hue will be gone to a string.
