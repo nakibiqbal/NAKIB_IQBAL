@@ -1,12 +1,12 @@
-import one from "../../assets/edit2.jpg";
-import two from "../../assets/edit6.jpg"
-import three from "../../assets/flower.jpg"
-import four from "../../assets/l4.jpg"
-import five from "../../assets/light.jpg"
-import six from "../../assets/nature.jpg"
-import seven from "../../assets/n1.jpg"
-import eight from "../../assets/n2.jpg"
-import nine from "../../assets/n3.jpg"
+import one from "../../assets/sundaeCreative.png";
+import two from "../../assets/sundaeCreative.png"
+import three from "../../assets/ImageGallery3.png"
+import four from "../../assets/ImageGallery2.png"
+import five from "../../assets/ImageGallery3.png"
+import six from "../../assets/ScrollParallax.png"
+import seven from "../../assets/Card.png"
+import eight from "../../assets/navbarV1.png"
+import nine from "../../assets/staggeredTxt.png"
 
 export const ListData = [
   {

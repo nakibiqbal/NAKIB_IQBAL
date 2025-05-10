@@ -1,13 +1,14 @@
 .parentBG {
-  width: 30rem;
+  width: 40rem;
   height: 30rem;
-  background: rgb(0 0 36);
+  background: #005000;
   position: fixed;
   pointer-events: none;
+  mix-blend-mode: difference;
 }
 .galleryContainer {
-  width: 25rem;
-  height: 20rem;
+  width: 35rem;
+  height: 18rem;
   overflow: hidden;
   pointer-events: none;
   position: fixed;
@@ -54,4 +55,5 @@
 
 .viewCursorTxt {
   background: transparent;
+  mix-blend-mode: normal;
 }
