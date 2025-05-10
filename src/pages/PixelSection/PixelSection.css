@@ -5,10 +5,11 @@
 .pixelDiv {
   width: 5vw;
   height: 5vw;
-  mix-blend-mode: difference;
-  background-color: transparent;
+  mix-blend-mode: lighten;
+  background-color: rgb(0, 30, 0);
   z-index: 2;
 }
+
 .iframe {
   width: 14vw;
   height: 8vw;
@@ -72,6 +73,9 @@
 }
 
 @media (max-width: 500px) {
+  .pixelDiv {
+    background: transparent;
+  }
   .name {
     font-size: 4vw;
     line-height: 6vw;

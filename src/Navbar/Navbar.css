@@ -6,8 +6,10 @@
   padding: 2rem 0;
   position: fixed;
   z-index: 999;
+  pointer-events: none;
 }
 .navbar button {
+  pointer-events: all;
   width: 6rem;
   height: 2.5rem;
   background: rgb(0 80 0 / 40%);

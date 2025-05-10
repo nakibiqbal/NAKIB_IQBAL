@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { AiFillOpenAI } from "react-icons/ai";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -20,7 +21,7 @@ const PixelContent = ({ mainRef }) => {
         textAlign: "center",
         pointerEvents: "none",
         overflow: "hidden",
-        opacity
+        opacity: opacity
       }}
     >
       <iframe
