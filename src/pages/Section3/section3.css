@@ -7,7 +7,6 @@
   align-items: center;
   flex-direction: column;
   position: relative;
-  box-sizing: border-box;
 }
 .section3Content {
   list-style: none;

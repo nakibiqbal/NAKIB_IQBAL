@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <main>
-        {/* <div className="openToWork">
+        {/* <               div className="openToWork">
           <motion.span
             initial={{ boxShadow: "0 0 0 0px green" }}
             animate={{ boxShadow: "0 0 0 8px green" }}
@@ -27,8 +27,8 @@ function App() {
         <Navbar />
         <PixelSection />
         <Section5 />
-        <Section6 />
         <Section3 />
+        <Section6 />
         <Section2 />
         <Section4 />
         <Contact />
