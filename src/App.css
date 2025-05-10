@@ -7,6 +7,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Required: html and body must have full height */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Any wrapper div (like #root or .App) must also have full height */
+#root {
+  height: 100%;
+}
 body {
   width: 100%;
   height: 100%;
@@ -14,6 +25,7 @@ body {
   color: white;
 }
 
+/* 
 .openToWork {
   width: 10.8rem;
   height: 34px;
@@ -50,4 +62,4 @@ body {
     bottom: 0;
     transform: translate(-50%, -10px);
   }
-}
+} */
