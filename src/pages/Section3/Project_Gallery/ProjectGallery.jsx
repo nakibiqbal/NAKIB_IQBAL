@@ -14,11 +14,15 @@ const scaleAnimation = {
 
 const ProjectGallery = ({ list, modal, hoverEl }) => {
     const { active, index } = modal;
+    const parentBG = useRef(null);
     const galleryContainer = useRef(null);
     const viewCursorBG = useRef(null);
     const viewCursorTxt = useRef(null);
 
     useGSAP(() => {
+        //Move Parent Background
+        let xMoveParent = gsap.quickTo(parentBG.current, "left", { duration: 0.8, ease: "power3" })
+        let yMoveParent = gsap.quickTo(parentBG.current, "top", { duration: 0.8, ease: "power3" })
         //Move Container
         let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.6, ease: "power3" })
         let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.6, ease: "power3" })
@@ -33,6 +37,8 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
 
         const handleMouseMove = (e) => {
             const { clientX, clientY } = e;
+            xMoveParent(clientX);
+            yMoveParent(clientY);
             xMoveContainer(clientX);
             yMoveContainer(clientY);
             xCursorMoveBG(clientX);
@@ -48,6 +54,13 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
 
     return (
         <>
+
+            <motion.div ref={parentBG}
+                variants={scaleAnimation}
+                initial="initial"
+                animate={active ? "enter" : "closed"}
+                className="parentBG"
+            />
 
             <motion.div
                 ref={galleryContainer}
@@ -71,8 +84,22 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
 
             </motion.div>
 
-            <div ref={viewCursorBG} className="viewCursorBG" />
-            <p ref={viewCursorTxt} className="viewCursorTxt">View</p>
+            <motion.div
+                variants={scaleAnimation}
+                initial="initial"
+                animate={active ? "enter" : "closed"}
+                ref={viewCursorBG}
+                className="viewCursorBG"
+            />
+            <motion.p
+                variants={scaleAnimation}
+                initial="initial"
+                animate={active ? "enter" : "closed"}
+                ref={viewCursorTxt}
+                className="viewCursorTxt"
+            >
+                View
+            </motion.p>
 
         </>
     )
