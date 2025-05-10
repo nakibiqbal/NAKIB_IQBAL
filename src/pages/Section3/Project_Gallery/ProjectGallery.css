@@ -5,6 +5,7 @@
   position: fixed;
   pointer-events: none;
   mix-blend-mode: difference;
+  backdrop-filter: blur(10px);
 }
 .galleryContainer {
   width: 35rem;
