@@ -1,14 +1,8 @@
 /* eslint-disable react/prop-types */
 import { AiFillOpenAI } from "react-icons/ai";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
-const PixelContent = ({ mainRef }) => {
-  const { scrollYProgress } = useScroll({
-    target: mainRef,
-    offset: ["end end", "end center"],
-  })
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
-
+const PixelContent = ({ opacity }) => {
   return (
     <motion.div
       style={{
@@ -21,7 +15,7 @@ const PixelContent = ({ mainRef }) => {
         textAlign: "center",
         pointerEvents: "none",
         overflow: "hidden",
-        opacity: opacity
+        opacity
       }}
     >
       <iframe

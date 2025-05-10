@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./PixelSection.css";
 import PixelContent from "./PixelContent";
 import useCustomHook from "../../hooks/CustomHook/useCustomHook";
@@ -7,6 +7,11 @@ import useCustomHook from "../../hooks/CustomHook/useCustomHook";
 const PixelSection = () => {
   const { boxCount } = useCustomHook();
   const mainRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: mainRef,
+    offset: ["end end", "end center"],
+  })
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
 
   return (
     <section
@@ -46,7 +51,7 @@ const PixelSection = () => {
       </div>
 
       {/* Content overlay */}
-      <PixelContent mainRef={mainRef} />
+      <PixelContent opacity={opacity} />
     </section>
   );
 };
