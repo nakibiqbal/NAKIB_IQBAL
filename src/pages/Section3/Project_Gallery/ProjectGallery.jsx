@@ -21,17 +21,17 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
 
     useGSAP(() => {
         //Move Parent Background
-        let xMoveParent = gsap.quickTo(parentBG.current, "left", { duration: 0.8, ease: "power3" })
-        let yMoveParent = gsap.quickTo(parentBG.current, "top", { duration: 0.8, ease: "power3" })
+        let xMoveParent = gsap.quickTo(parentBG.current, "left", { duration: 0.6, ease: "power3" })
+        let yMoveParent = gsap.quickTo(parentBG.current, "top", { duration: 0.6, ease: "power3" })
         //Move Container
-        let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.6, ease: "power3" })
-        let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.6, ease: "power3" })
+        let xMoveContainer = gsap.quickTo(galleryContainer.current, "left", { duration: 0.5, ease: "power3" })
+        let yMoveContainer = gsap.quickTo(galleryContainer.current, "top", { duration: 0.5, ease: "power3" })
         // Move Viewing Cursor Bg
         let xCursorMoveBG = gsap.quickTo(viewCursorBG.current, "left", { duration: 0.4, ease: "power3" })
         let yCursorMoveBG = gsap.quickTo(viewCursorBG.current, "top", { duration: 0.4, ease: "power3" })
         // Move Viewing Cursor Txt
-        let xCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "left", { duration: 0.2, ease: "power3" })
-        let yCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "top", { duration: 0.2, ease: "power3" })
+        let xCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "left", { duration: 0.3, ease: "power3" })
+        let yCursorMoveTxt = gsap.quickTo(viewCursorTxt.current, "top", { duration: 0.3, ease: "power3" })
 
         const hoverArea = hoverEl.current;
 
@@ -50,7 +50,7 @@ const ProjectGallery = ({ list, modal, hoverEl }) => {
         hoverArea.addEventListener('mousemove', handleMouseMove)
 
         return () => { hoverArea.removeEventListener('mousemove', handleMouseMove) }
-    }, { scope: [galleryContainer, viewCursorBG] });
+    }, { scope: [galleryContainer, viewCursorBG, scaleAnimation] });
 
     return (
         <>
