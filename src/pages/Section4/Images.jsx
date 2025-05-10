@@ -56,6 +56,7 @@ const ScrollFunction = ({ index, src, className, parentRef }) => {
                         start: `${index * (isSmallScreen ? 80 : 70)}% 50%`,
                         end: `${index * (isSmallScreen ? 80 : 70)}% -110%`,
                         scrub: true,
+                        markers: true
                     },
                 }
             );
