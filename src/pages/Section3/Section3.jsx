@@ -5,6 +5,7 @@ import ProjectContent from "./Project_Content/ProjectContent";
 import "./section3.css";
 import { ListData } from "./ListData";
 import designA3 from "../../assets/designA3.png"
+import designA4 from "../../assets/designA4.png"
 
 function Section3() {
   const [list] = useState(ListData);
@@ -16,7 +17,9 @@ function Section3() {
     offset: ["start end", "end start"],
   })
   const y = useTransform(scrollYProgress, [0, 1], [-200, 600])
+  const yReverse = useTransform(scrollYProgress, [0, 1], [600, -1000])
   const hue = useTransform(scrollYProgress, [0, 1], [150, 80])
+  const rotate = useTransform(scrollYProgress, [0, 1], [360, -360])
 
   // MotionTemplate used because hue will be gone to a string.
   const filter = useMotionTemplate`hue-rotate(${hue}deg) blur(20px)`;
@@ -29,6 +32,9 @@ function Section3() {
 
         <motion.div style={{ y }} className="imgBgThreeParent">
           <motion.img style={{ filter }} src={designA3} className="bgImgThree" alt="Background" />
+        </motion.div>
+        <motion.div style={{ y: yReverse }} className="imgBgFourParent">
+          <motion.img style={{ rotate }} src={designA4} className="bgImgFour" alt="Background" />
         </motion.div>
 
         <div ref={hoverEl} className="section3Content">

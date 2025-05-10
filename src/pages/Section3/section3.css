@@ -30,6 +30,17 @@ img.bgImgThree {
   width: 40rem;
   transform: rotate(105deg);
 }
+
+.imgBgFourParent {
+  position: absolute;
+  left: -21rem;
+  bottom: -5rem;
+}
+.imgBgFourParent img {
+  width: 40rem;
+  filter: invert(1) blur(20px);
+}
+
 @media (max-width: 1200px) {
   .section3Content {
     width: 100%;
