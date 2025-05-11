@@ -27,7 +27,7 @@ const Section4 = () => {
 
         <div className="parentImgDiv">
           {data.map(({ src, className }, index) => (
-            <ScrollFunction key={index} index={index} parentRef={parentRef.current} src={src} className={className} />
+            <ScrollFunction key={index} index={index} src={src} className={className} />
           ))}
         </div>
 
@@ -57,7 +57,7 @@ const Section4 = () => {
 export default Section4;
 
 
-const ScrollFunction = ({ index, src, className, parentRef }) => {
+const ScrollFunction = ({ index, src, className }) => {
   const childRef = useRef(null);
 
   // For small screen size
@@ -99,7 +99,7 @@ const ScrollFunction = ({ index, src, className, parentRef }) => {
         }
       );
     },
-    { scope: parentRef }
+    {}
   );
 
   return (
