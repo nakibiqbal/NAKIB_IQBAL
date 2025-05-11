@@ -48,12 +48,11 @@ img.bgImgThree {
 }
 @media (max-width: 982px) {
   #image_reveal {
-    /* height: 100%; */
     padding: 10rem 0rem;
-    height: 400vh;
+    height: 280rem;
   }
   .section3Content {
-    gap: 2rem;
+    gap: 50px;
   }
   .imgBgThreeParent {
     right: -7rem;
@@ -64,5 +63,14 @@ img.bgImgThree {
   }
   .imgBgFourParent {
     left: -20rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #image_reveal {
+    height: 230rem;
+  }
+  .section3Content {
+    gap: 10px;
   }
 }
