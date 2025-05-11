@@ -38,7 +38,7 @@ const ProjectContent = ({ setModal, list }) => {
                                 }}
                                 viewport={{ once: true }}
                                 transition={{
-                                    duration: 3,
+                                    duration: 2,
                                     ease: [0.87, 0, 0.13, 1],
                                 }}
                             />
