@@ -99,7 +99,7 @@ const ScrollFunction = ({ index, src, className, parentRef }) => {
         }
       );
     },
-    { scope: parentRef }
+    { scope: parentRef.current }
   );
 
   return (
