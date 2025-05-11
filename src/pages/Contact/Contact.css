@@ -2,199 +2,124 @@
 
 /* Contact.css */
 #ContactSection {
-  color: white;
-  text-align: center;
   position: relative;
-  height: 100%;
-  padding: 8rem 5rem;
+  height: 40rem;
+  padding: 5rem 1rem;
+  border-top: 1px solid #004700;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 15rem;
-  border-top: 1px solid #dab6025e;
-}
-
-.contactWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
+
 .CLinks {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 30%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   position: relative;
   gap: 2rem;
 }
-.dock-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  background: #ffffff14;
-  width: 300px;
-  height: 90px;
-  align-items: center;
-  border-radius: 50rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, 190%);
-}
+
 .mail {
   display: flex;
   flex-direction: column;
-  font-family: "Gruppo";
+  font-family: "Quicksand";
   justify-content: center;
   align-items: flex-start;
-}
-.app-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: white;
-  background: black;
-  border: none;
-}
-.app-icon:hover {
-  transform: scale(1.1);
-}
-
-.app-icon:active {
-  transform: scale(0.95);
+  width: 30rem;
+  height: 3rem;
 }
 
 .mail a {
-  font-size: 27px;
+  font-size: 36px;
   position: relative;
   overflow: hidden;
-  width: 22rem;
-  height: 2rem;
-  color: #ffffff9f;
+  width: 100%;
+  height: 100%;
+  color: white;
   text-decoration: none;
-  margin: auto;
-  transition: all 0.2s linear;
 }
+
 .mail a:hover {
-  color: #e1bc01;
+  color: rgb(0, 255, 0);
 }
 .mail a:before {
   content: "";
   position: absolute;
-  background: #e1bc01;
+  background: rgb(0, 255, 0);
   width: 100%;
   height: 1.5px;
   bottom: 0px;
   left: 0;
   transform: scaleX(0);
   transform-origin: center;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
 }
 .mail a:hover::before {
   transform: scaleX(1);
 }
-.mail p {
-  font-size: 27px;
-  padding: 1rem 0rem;
-}
-.mail span {
-  color: #ccaf1a;
-  font-size: 32px;
-  font-style: italic;
-}
 
-/*  */
-
-.sections {
+.contactIcons {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 70%;
-  height: 100%;
-  flex-wrap: wrap;
-  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   gap: 3rem;
 }
-.sections a {
-  text-decoration: none;
-  color: #ffffff9f;
-  font-family: "Gruppo";
-  font-size: 20px;
-  line-height: 24px;
+.Icons {
+  position: relative;
 }
-.allSecDetail span {
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+.Icons::after {
+  position: absolute;
+  content: "";
+  background: rgb(0, 255, 0);
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  pointer-events: none;
+  z-index: 999;
 }
-.sections a:hover {
-  .allSecDetail span {
-    transform: translateY(-100%);
-    color: #e1bc01;
-  }
+.Icons:hover::after {
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
 }
-.allSecDetail {
-  text-align: left;
-  width: 15rem;
+.Icons:hover svg {
+  color: black;
 }
-.allSecDetail h3 {
-  font-family: "Limelight";
-  font-size: 24px;
-  font-weight: 100;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 38px;
-  overflow: hidden;
-  line-height: 36px;
+.Icons svg {
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  z-index: 9999;
 }
-.allSecDetail {
-  text-align: left;
-  width: 15rem;
-}
-.allSecDetail p {
-  padding-top: 15px;
+.islamicQuote {
+  position: relative;
+  z-index: 9;
 }
 .islamicQuote p,
 i {
-  color: #ffd500;
+  color: #00ff00;
   font-size: 22px;
   font-family: "Quicksand", sans-serif;
 }
 
-@media (max-width: 1320px) {
-  #ContactSection {
-    padding: 5rem 1rem;
-    gap: 10rem;
-  }
-
-  .contactWrapper {
-    gap: 15rem;
-  }
-  .CLinks {
-    width: 100%;
-  }
-  .sections {
-    width: 100%;
-    justify-content: flex-start;
-  }
+section#ContactSection h1 {
+  font-family: "Quicksand", sans-serif;
+  position: relative;
+  z-index: 9;
+  font-weight: 900;
+  font-size: 22px;
+  color: #00ff00;
 }
+
 @media (max-width: 500px) {
-  .mail a {
-    font-size: 22px;
-    width: 265px;
-    height: 28px;
-  }
-  .dock-container {
-    left: -2%;
-    transform: translate(0, 125%);
-  }
   .islamicQuote p,
   i {
     color: #ffd500;
@@ -202,9 +127,8 @@ i {
     font-family: "Quicksand", sans-serif;
   }
 }
-
 .background {
-  background: conic-gradient(from 0.6921rad, #c76000, rgba(7, 29, 228, 0.5));
+  background: conic-gradient(from 0.6921rad, #005500, #000070);
   width: 30rem;
   height: 30rem;
   position: absolute;
@@ -214,30 +138,4 @@ i {
   filter: blur(10rem);
   border-radius: 50%;
   pointer-events: none;
-}
-.x2 {
-  width: 20rem;
-  height: 20rem;
-}
-.mobile {
-  display: none;
-}
-@media (max-width: 1152px) {
-  .background {
-    transform: translate(-50%, 30%);
-  }
-  .mobile {
-    display: inline;
-    background: conic-gradient(
-      rgb(43 0 49 / 64%),
-      rgb(43 0 49 / 64%),
-      rgb(0 50 255 / 28%)
-    );
-    top: -15%;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-  #ContactSection {
-    border-radius: 2rem 2rem 0rem 0rem;
-  }
 }

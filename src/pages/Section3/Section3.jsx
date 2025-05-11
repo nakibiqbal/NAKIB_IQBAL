@@ -10,7 +10,6 @@ import designA4 from "../../assets/designA4.png"
 function Section3() {
   const [list] = useState(ListData);
 
-
   // For small screen size
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 982);
 
