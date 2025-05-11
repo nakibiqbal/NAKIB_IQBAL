@@ -8,18 +8,18 @@ import { Data } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Images({ parentRef }) {
+export default function Images() {
     const [data] = useState(Data);
     return (
         <div className="parentImgDiv">
             {data.map(({ src, className }, index) => (
-                <ScrollFunction key={index} index={index} parentRef={parentRef} src={src} className={className} />
+                <ScrollFunction key={index} index={index} src={src} className={className} />
             ))}
         </div>
     );
 }
 
-const ScrollFunction = ({ index, src, className, parentRef }) => {
+const ScrollFunction = ({ index, src, className }) => {
     const childRef = useRef(null);
 
     // For small screen size
@@ -56,12 +56,11 @@ const ScrollFunction = ({ index, src, className, parentRef }) => {
                         start: `${index * (isSmallScreen ? 80 : 70)}% 50%`,
                         end: `${index * (isSmallScreen ? 80 : 70)}% -110%`,
                         scrub: true,
-                        markers: true
                     },
                 }
             );
         },
-        { scope: parentRef }
+        { scope: childRef }
     );
 
     return (

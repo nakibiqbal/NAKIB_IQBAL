@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import Images from "./Images";
+import Images from "./Images";
 import "./section4.css";
 import "./images.css"
-import { Data } from "./data";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section4 = () => {
   const parentRef = useRef(null);
-  const [data] = useState(Data);
 
   const { scrollYProgress } = useScroll({ target: parentRef, offset: ["start 20%", "end 110%"] });
   const y = useTransform(scrollYProgress, [0, 1], ["100%", "0%"]);
@@ -22,17 +19,7 @@ const Section4 = () => {
 
       <div className="imageWrapper">
 
-
-        {/* Images start */}
-
-        <div className="parentImgDiv">
-          {data.map(({ src, className }, index) => (
-            <ScrollFunction key={index} index={index} parentRef={parentRef} src={src} className={className} />
-          ))}
-        </div>
-
-        {/* <Images parentRef={parentRef.current} /> */}
-        {/* Images end */}
+        <Images />
 
         <motion.div style={{ y }} className="texts">
 
@@ -56,58 +43,3 @@ const Section4 = () => {
 
 export default Section4;
 
-
-const ScrollFunction = ({ index, src, className, parentRef }) => {
-  const childRef = useRef(null);
-
-  // For small screen size
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
-
-  // Update state on screen resize
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 500);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        childRef.current,
-        {
-          z: -1000,
-          opacity: 0,
-        },
-        {
-          z: 300,
-          opacity: 1,
-          scrollTrigger: {
-            trigger: childRef.current,
-            scroller: parentRef.current,
-            start: `${index * (isSmallScreen ? 80 : 70)}% 50%`,
-            end: `${index * (isSmallScreen ? 80 : 70)}% -110%`,
-            scrub: true,
-            markers: true
-          },
-        }
-      );
-    },
-    { scope: childRef }
-  );
-
-  return (
-    <div ref={childRef} className="childImgDiv">
-      <div className={`imagesSize ${className}`}>
-        <img src={src} loading="lazy" />
-      </div>
-    </div>
-  );
-};

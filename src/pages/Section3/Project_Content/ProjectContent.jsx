@@ -29,7 +29,20 @@ const ProjectContent = ({ setModal, list }) => {
 
                             <h2>{item.label}</h2>
 
-                            <img src={item.img} />
+                            <motion.img src={item.img}
+                                initial={{
+                                    clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)", // Hidden (left side)
+                                }}
+                                whileInView={{
+                                    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", // Fully visible
+                                }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    duration: 1,
+                                    delay: item.id * 0.1,
+                                    ease: [0.87, 0, 0.13, 1],
+                                }}
+                            />
 
                             <div className="viewCursorBG viewBtn">
                                 <a href="#">View</a>
