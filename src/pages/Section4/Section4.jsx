@@ -27,7 +27,7 @@ const Section4 = () => {
 
         <div className="parentImgDiv">
           {data.map(({ src, className }, index) => (
-            <ScrollFunction key={index} index={index} parentRef={parentRef} src={src} className={className} />
+            <ScrollFunction key={index} index={index} parentRef={parentRef.current} src={src} className={className} />
           ))}
         </div>
 
@@ -99,7 +99,7 @@ const ScrollFunction = ({ index, src, className, parentRef }) => {
         }
       );
     },
-    { scope: parentRef.current }
+    { scope: parentRef }
   );
 
   return (
