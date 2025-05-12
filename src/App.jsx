@@ -8,7 +8,7 @@ import Section4 from "./pages/Section4/Section4";
 import Section5 from "./pages/Section5/Section5";
 import Section6 from "./pages/Section6/Section6";
 import useLenis from "./useLenis";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 function App() {
   useLenis();
@@ -16,14 +16,14 @@ function App() {
   return (
     <>
       <main>
-        {/* <               div className="openToWork">
+        <div className="openToWork">
           <motion.span
             initial={{ boxShadow: "0 0 0 0px green" }}
             animate={{ boxShadow: "0 0 0 8px green" }}
             transition={{ repeat: Infinity, repeatType: "reverse", duration: 1 }}
           ></motion.span>
           <p>OPEN TO WORK</p>
-        </div> */}
+        </div>
         <Navbar />
         <PixelSection />
         <Section5 />

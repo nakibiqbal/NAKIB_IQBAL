@@ -7,10 +7,10 @@ const useLenis = () => {
   useEffect(() => {
     // Initialize Lenis
     lenisRef.current = new Lenis({
-      // duration: 1.2,
+      duration: 1.5,
       // easing: (t) => t * (2 - t),
       // direction: "vertical",
-      smoothWheel: true,
+      // smoothWheel: true,
     });
 
     const onScroll = (time) => {

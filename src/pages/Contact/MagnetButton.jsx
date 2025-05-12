@@ -22,7 +22,9 @@ export default function MagnetButton({ children }) {
 
     return (
         <motion.div animate={{ x, y }} onMouseMove={mouseMove} onMouseLeave={mouseLeave} ref={ref}
-            className="Icons"  >
+            className="Icons"
+            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+        >
 
             {
                 children
