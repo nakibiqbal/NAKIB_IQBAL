@@ -88,17 +88,17 @@
   }
   .navbar {
     justify-content: flex-end;
-    padding: 2rem 1.5rem;
   }
   .navbar button {
     width: 5rem;
     height: 2rem;
     font-size: 10px;
-    top: 30px;
+    top: 29px;
+    right: 22px;
   }
   .navItem {
-    top: 21px;
-    right: -8px;
+    top: 20px;
+    right: 14px;
   }
   .navItems {
     justify-content: space-around;

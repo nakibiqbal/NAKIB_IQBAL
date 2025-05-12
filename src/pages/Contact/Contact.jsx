@@ -7,7 +7,15 @@ import bg5 from "../../assets/bg5.png"
 function Contact() {
 
     return (
-        <section id="ContactSection">
+        <motion.section
+            initial={{ filter: "blur(20px)" }}
+            whileInView={{ filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{
+                duration: 1.5,
+                ease: [0.87, 0, 0.13, 1],
+            }}
+            id="ContactSection">
 
             <div className="contactMe">
                 <h1>Let&apos;s connect.</h1>
@@ -55,7 +63,7 @@ function Contact() {
                 }}
             />
 
-        </section>
+        </motion.section>
     );
 }
 
