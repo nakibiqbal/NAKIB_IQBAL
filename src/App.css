@@ -7,14 +7,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Required: html and body must have full height */
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Any wrapper div (like #root or .App) must also have full height */
 #root {
   height: 100%;
 }
@@ -24,42 +16,3 @@ body {
   background-color: black;
   color: white;
 }
-
-/* 
-.openToWork {
-  width: 10.8rem;
-  height: 34px;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid #ffffff78;
-  border-radius: 5rem;
-  z-index: 999999;
-  backdrop-filter: blur(10px);
-  background: #0000006b;
-}
-.openToWork span {
-  background: rgb(0, 255, 0);
-  width: 0.8rem;
-  height: 0.8rem;
-  display: block;
-  border-radius: 50%;
-}
-.openToWork p {
-  font-family: "Pixel Sans Serif";
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 100;
-  word-spacing: -2px;
-}
-
-@media (max-width: 510px) {
-  .openToWork {
-    bottom: 0;
-    transform: translate(-50%, -10px);
-  }
-} */

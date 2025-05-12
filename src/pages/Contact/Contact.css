@@ -14,7 +14,13 @@
   text-align: center;
   color: #d9d9d9;
 }
-
+.contactMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .CLinks {
   display: flex;
   flex-direction: column;
@@ -22,9 +28,8 @@
   align-items: center;
   width: 100%;
   position: relative;
-  gap: 2rem;
+  gap: 5.5rem;
 }
-
 .mail {
   display: flex;
   flex-direction: column;
@@ -135,6 +140,34 @@ section#ContactSection h1 {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
+}
+
+.openToWork {
+  width: 10.8rem;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ffffff78;
+  border-radius: 5rem;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: #0000006b;
+}
+.openToWork span {
+  background: rgb(0, 255, 0);
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  border-radius: 50%;
+}
+.openToWork p {
+  font-family: "Pixel Sans Serif";
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  word-spacing: -2px;
 }
 
 @media (max-width: 500px) {
