@@ -1,4 +1,4 @@
-import { FaGithub, FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import './Contact.css'; // Import the custom CSS file
 import MagnetButton from './MagnetButton';
 
@@ -18,16 +18,13 @@ function Contact() {
 
                 <div className="contactIcons">
                     <MagnetButton>
-                        <FaFacebook />
+                        <a href="https://www.facebook.com/nakib.iqbal.98" target='_blink' ><FaFacebook /></a>
                     </MagnetButton>
                     <MagnetButton>
-                        <FaLinkedin />
+                        <a href="https://www.linkedin.com/in/nakib-iqbal/" target='_blink'><FaLinkedin /></a>
                     </MagnetButton>
                     <MagnetButton>
-                        <FaTwitter />
-                    </MagnetButton>
-                    <MagnetButton>
-                        <FaGithub />
+                        <a href="https://github.com/nakibiqbal" target='_blink'><FaGithub /></a>
                     </MagnetButton>
                 </div>
 

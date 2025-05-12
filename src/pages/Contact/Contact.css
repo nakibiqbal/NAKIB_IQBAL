@@ -80,24 +80,27 @@
   width: 4rem;
   height: 4rem;
   left: 50%;
-  top: 47%;
-  transform: translate(-50%, -50%) scale(0) rotate(-360deg);
-  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  top: 40%;
+  transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  transition: transform 0.3s ease, border-radius 0.3s ease;
   pointer-events: none;
-  z-index: 999;
+  z-index: 9;
+  border-radius: 0rem;
 }
 .Icons:hover::after {
-  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+  border-radius: 5rem;
+  transform: translate(-50%, -50%) scale(1) rotate(180deg);
 }
-.Icons:hover svg {
+.Icons:hover a {
   color: black;
 }
-.Icons svg {
+.Icons a {
   font-size: 3rem;
   cursor: pointer;
   position: relative;
-  transition: all 0.6s cubic-bezier(0.87, 0, 0.13, 1);
-  z-index: 9999;
+  transition: all 0.3s ease;
+  z-index: 99;
+  color: white;
 }
 .islamicQuote {
   position: relative;
@@ -105,7 +108,7 @@
 }
 .islamicQuote p,
 i {
-  color: #00ff00;
+  color: hsl(50, 100%, 50%);
   font-size: 22px;
   font-family: "Quicksand", sans-serif;
 }
@@ -116,17 +119,9 @@ section#ContactSection h1 {
   z-index: 9;
   font-weight: 900;
   font-size: 22px;
-  color: #00ff00;
+  color: whitesmoke;
 }
 
-@media (max-width: 500px) {
-  .islamicQuote p,
-  i {
-    color: #ffd500;
-    font-size: 18px;
-    font-family: "Quicksand", sans-serif;
-  }
-}
 .background {
   background: conic-gradient(from 0.6921rad, #005500, #000070);
   width: 30rem;
@@ -138,4 +133,18 @@ section#ContactSection h1 {
   filter: blur(10rem);
   border-radius: 50%;
   pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .islamicQuote p,
+  i {
+    font-size: 18px;
+  }
+  .mail {
+    width: 20rem;
+    height: 2rem;
+  }
+  .mail a {
+    font-size: 24px;
+  }
 }

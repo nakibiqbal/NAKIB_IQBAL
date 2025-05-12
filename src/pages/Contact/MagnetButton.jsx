@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
 
@@ -21,8 +22,7 @@ export default function MagnetButton({ children }) {
 
     return (
         <motion.div animate={{ x, y }} onMouseMove={mouseMove} onMouseLeave={mouseLeave} ref={ref}
-            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-            className="Icons" >
+            className="Icons"  >
 
             {
                 children
