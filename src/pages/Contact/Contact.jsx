@@ -1,6 +1,7 @@
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import './Contact.css'; // Import the custom CSS file
 import MagnetButton from './MagnetButton';
+import bg5 from "../../assets/bg5.png"
 
 function Contact() {
 
@@ -35,7 +36,12 @@ function Contact() {
                 <i>[Surah Al-Mu&apos;min, 40:60]</i>
             </div>
 
-            <div className="background"></div>
+            <div
+                className="background"
+                style={{
+                    backgroundImage: `url(${bg5})`, // Import the background image
+                }}
+            />
 
         </section>
     );
