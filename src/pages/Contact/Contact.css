@@ -5,13 +5,14 @@
   position: relative;
   height: 40rem;
   padding: 5rem 1rem;
-  border-top: 1px solid #004700;
+  border-top: 1px solid white;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  color: #d9d9d9;
 }
 
 .CLinks {
@@ -27,7 +28,7 @@
 .mail {
   display: flex;
   flex-direction: column;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif;
   justify-content: center;
   align-items: flex-start;
   width: 30rem;
@@ -40,17 +41,14 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-  color: white;
   text-decoration: none;
+  color: #d9d9d9;
 }
 
-.mail a:hover {
-  color: rgb(0, 255, 0);
-}
 .mail a:before {
   content: "";
   position: absolute;
-  background: rgb(0, 255, 0);
+  background: black;
   width: 100%;
   height: 1.5px;
   bottom: 0px;
@@ -68,7 +66,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 3rem;
+  gap: 1rem;
 }
 .Icons {
   position: relative;
@@ -76,7 +74,7 @@
 .Icons::after {
   position: absolute;
   content: "";
-  background: rgb(0, 255, 0);
+  background: #d9d9d9;
   width: 4rem;
   height: 4rem;
   left: 50%;
@@ -101,6 +99,7 @@
   transition: all 0.3s ease;
   z-index: 99;
   color: white;
+  padding: 2rem;
 }
 .islamicQuote {
   position: relative;
@@ -108,7 +107,6 @@
 }
 .islamicQuote p,
 i {
-  color: hsl(50, 100%, 50%);
   font-size: 22px;
   font-family: "Quicksand", sans-serif;
 }
@@ -119,20 +117,21 @@ section#ContactSection h1 {
   z-index: 9;
   font-weight: 900;
   font-size: 22px;
-  color: whitesmoke;
 }
 
 .background {
-  background: conic-gradient(from 0.6921rad, #005500, #000070);
-  width: 30rem;
-  height: 30rem;
+  background-image: url(src/assets/bg5.png);
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
-  filter: blur(10rem);
-  border-radius: 50%;
   pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 @media (max-width: 500px) {

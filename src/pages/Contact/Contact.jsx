@@ -36,7 +36,6 @@ function Contact() {
             </div>
 
             <div className="background"></div>
-            <div className="background x2"></div>
 
         </section>
     );
