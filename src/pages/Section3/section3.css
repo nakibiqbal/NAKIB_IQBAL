@@ -20,15 +20,14 @@
   position: relative;
   overflow: visible;
 }
-
 .imgBgThreeParent {
   position: absolute;
-  right: -4rem;
+  right: -7rem;
   top: -20rem;
+  pointer-events: none;
 }
 img.bgImgThree {
   width: 40rem;
-  transform: rotate(105deg);
 }
 
 .imgBgFourParent {
@@ -38,7 +37,6 @@ img.bgImgThree {
 }
 .imgBgFourParent img {
   width: 40rem;
-  filter: invert(1) blur(20px);
 }
 
 @media (max-width: 1200px) {

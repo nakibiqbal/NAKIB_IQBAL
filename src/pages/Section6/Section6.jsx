@@ -77,12 +77,12 @@ const Section6 = () => {
   ];
 
   // For small screen size
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 983);
 
   // Update state on screen resize
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 500);
+      setIsSmallScreen(window.innerWidth <= 983);
     };
 
     window.addEventListener("resize", handleResize);
@@ -98,7 +98,7 @@ const Section6 = () => {
     target: secRef,
     offset: ["start end", "end center"]
   })
-  const y = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? -100 : -200, isSmallScreen ? 700 : 200])
+  const y = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? -100 : -200, isSmallScreen ? 1000 : 200])
 
 
   return (

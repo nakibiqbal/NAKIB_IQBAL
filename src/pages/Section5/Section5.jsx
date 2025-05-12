@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { FaReact } from "react-icons/fa";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { SiGreensock } from "react-icons/si";
-import designA3 from "../../assets/designA3.png"
+import bg1 from "../../assets/bg1.png"
 
 
 import MainVariant1 from "./Main_Variant1/MainVariant1";
@@ -56,7 +56,7 @@ const Section5 = () => {
         <section id="section5">
 
             <div className="imgBgTwoParent">
-                <img src={designA3} className="bgImgTwo" alt="Background" />
+                <img src={bg1} className="bgImgTwo" alt="Background" />
             </div>
 
             <div className="sec5Wrapper">

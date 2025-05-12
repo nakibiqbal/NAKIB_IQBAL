@@ -4,8 +4,8 @@ import ProjectGallery from "./Project_Gallery/ProjectGallery";
 import ProjectContent from "./Project_Content/ProjectContent";
 import "./section3.css";
 import { ListData } from "./ListData";
-import designA3 from "../../assets/designA3.png"
-import designA4 from "../../assets/designA4.png"
+import bg2 from "../../assets/bg2.png"
+import bg3 from "../../assets/bg3.png"
 
 function Section3() {
   const [list] = useState(ListData);
@@ -33,13 +33,13 @@ function Section3() {
     target: secRef,
     offset: ["start end", "end start"],
   })
-  const y = useTransform(scrollYProgress, [0, 1], [-200, isSmallScreen ? 3000 : 600])
+  const y = useTransform(scrollYProgress, [0, 1], [-200, isSmallScreen ? 3500 : 700])
   const yReverse = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? 3000 : 600, isSmallScreen ? -1000 : -1000])
   const hue = useTransform(scrollYProgress, [0, 1], [isSmallScreen ? 200 : 150, isSmallScreen ? 50 : 80])
   const rotate = useTransform(scrollYProgress, [0, 1], [360, -360])
 
   // MotionTemplate used because hue will be gone to a string.
-  const filter = useMotionTemplate`hue-rotate(${hue}deg) blur(20px)`;
+  const filter = useMotionTemplate`hue-rotate(${hue}deg)`;
 
   const [modal, setModal] = useState({ active: false, index: 0 });
 
@@ -48,10 +48,10 @@ function Section3() {
       <section ref={secRef} id="image_reveal">
 
         <motion.div style={{ y }} className="imgBgThreeParent">
-          <motion.img style={{ filter }} src={designA3} className="bgImgThree" alt="Background" />
+          <motion.img style={{ filter }} src={bg2} className="bgImgThree" alt="Background" />
         </motion.div>
         <motion.div style={{ y: yReverse }} className="imgBgFourParent">
-          <motion.img style={{ rotate }} src={designA4} className="bgImgFour" alt="Background" />
+          <motion.img style={{ rotate }} src={bg3} className="bgImgFour" alt="Background" />
         </motion.div>
 
         <div ref={hoverEl} className="section3Content">

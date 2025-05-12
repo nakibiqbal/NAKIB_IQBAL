@@ -97,19 +97,23 @@
 
 .imgBgTwoParent {
   position: absolute;
-  right: -10%;
-  top: 47%;
-  transform: rotateZ(45deg) translate(-50%, -50%);
+  right: -13rem;
+  top: -5rem;
 }
 img.bgImgTwo {
-  width: 43rem;
-  filter: blur(80px) hue-rotate(90deg) contrast(2.5) brightness(2.5);
+  width: 46rem;
   pointer-events: none;
 }
 
 @media (min-width: 1920px) {
   img.bgImgTwo {
-    width: 40vw;
+    width: 45vw;
+  }
+  .imgBgTwoParent {
+    position: absolute;
+    right: -34%;
+    top: 31%;
+    transform: translate(-50%, -50%);
   }
 }
 @media (max-width: 1500px) {
@@ -169,7 +173,10 @@ img.bgImgTwo {
   }
   .imgBgTwoParent {
     right: -12rem;
-    top: 32rem;
+    top: -3rem;
+  }
+  img.bgImgTwo {
+    width: 45rem;
   }
 }
 
