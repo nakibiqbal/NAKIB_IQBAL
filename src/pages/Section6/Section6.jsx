@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Section6.css";
-import designA1 from "../../assets/designA1.png"
+import bg6 from "../../assets/bg6.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,7 +105,7 @@ const Section6 = () => {
     <section ref={secRef} id="section6">
       <motion.div style={{ y }} className="bgImgParent">
         <img
-          src={designA1} className="bgOne" alt="Background" />
+          src={bg6} className="bgOne" alt="Background" />
       </motion.div>
       <div className="cardContainer">
         {cardData.map((card) => (
@@ -116,7 +116,7 @@ const Section6 = () => {
             onMouseMove={(e) => handleMouseMove(e, card.id)}
             onMouseLeave={handleMouseLeave}
             style={{
-              transition: "transform 0.5s ease-out",
+              transition: "transform 0.3s ease-out",
             }}
           >
             {/* Shadow attached to the cursor */}

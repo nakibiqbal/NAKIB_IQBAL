@@ -90,13 +90,13 @@ img.bgOne {
 }
 @keyframes bgOne {
   0% {
-    filter: hue-rotate(200deg) blur(30px);
+    filter: hue-rotate(200deg);
   }
   50% {
-    filter: hue-rotate(300deg) blur(50px);
+    filter: hue-rotate(300deg);
   }
   100% {
-    filter: hue-rotate(200deg) blur(30px);
+    filter: hue-rotate(200deg);
   }
 }
 
