@@ -7,8 +7,9 @@ const ProjectContent = ({ setModal, list }) => {
         <>
             {list.map((item, index) => {
                 return (
-                    <motion.div
+                    <motion.a
                         key={item.id}
+                        href={item.link} target="_blank"
                         className="sec3Wrapper"
                         onMouseEnter={() => setModal({ active: true, index: index })}
                         onMouseLeave={() => setModal({ active: false, index: index })}
@@ -50,7 +51,7 @@ const ProjectContent = ({ setModal, list }) => {
                         </div>
 
 
-                    </motion.div>
+                    </motion.a>
                 );
             })}
         </>
