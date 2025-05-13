@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useScramble } from "use-scramble";
+import { customEase } from "../Easings/customEase";
 
 const Items = ({ setIsClick }) => {
     const navData = [
@@ -44,8 +45,8 @@ const ScrambleItems = ({ item, section, id, setIsClick }) => {
         onFocus={replay}
         initial={{ opacity: 0, scale: 1.5, y: 150, filter: "blur(20px)", color: "green" }}
         whileHover={{ color: "#00ff00bf" }}
-        animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", transition: { delay: id * 0.1, ease: [0.87, 0, 0.13, 1], duration: 1 } }}
-        exit={{ opacity: 0, y: 100, scale: 1, filter: "blur(20px)", transition: { ease: [0.87, 0, 0.13, 1], duration: 0.5 } }}
+        animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)", transition: { delay: id * 0.1, ease: customEase, duration: 1 } }}
+        exit={{ opacity: 0, y: 100, scale: 1, filter: "blur(20px)", transition: { ease: customEase, duration: 0.5 } }}
 
         href={section}
         onClick={async (e) => {

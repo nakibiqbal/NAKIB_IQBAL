@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import "./ProjectContent.css"
+import { customEase } from "../../../Easings/customEase";
 
 const ProjectContent = ({ setModal, list }) => {
     return (
@@ -22,7 +23,7 @@ const ProjectContent = ({ setModal, list }) => {
                             transition={{
                                 duration: 1,
                                 delay: item.id * 0.08,
-                                ease: [0.87, 0, 0.13, 1],
+                                ease: customEase,
                             }}
                         />
 
@@ -40,7 +41,7 @@ const ProjectContent = ({ setModal, list }) => {
                                 viewport={{ once: true }}
                                 transition={{
                                     duration: 2,
-                                    ease: [0.87, 0, 0.13, 1],
+                                    ease: customEase,
                                 }}
                             />
 

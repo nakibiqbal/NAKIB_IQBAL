@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 import ProjectGallery from "./Project_Gallery/ProjectGallery";
 import ProjectContent from "./Project_Content/ProjectContent";
@@ -6,26 +6,12 @@ import "./section3.css";
 import { ListData } from "./ListData";
 import bg2 from "../../assets/bg2.png"
 import bg3 from "../../assets/bg3.png"
+import useScreenSize from "../../hooks/ScreenSizeHook/useScreenSize";
+import useStateHook from "../../hooks/CustomStateHook/useStateHook";
 
 function Section3() {
   const [list] = useState(ListData);
-
-  // For small screen size
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 982);
-
-  // Update state on screen resize
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 982);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const isSmallScreen = useScreenSize(982);
 
   const secRef = useRef(null);
   const hoverEl = useRef(null);
@@ -41,7 +27,7 @@ function Section3() {
   // MotionTemplate used because hue will be gone to a string.
   const filter = useMotionTemplate`hue-rotate(${hue}deg)`;
 
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  const { modal, setModal } = useStateHook()
 
   return (
     <>

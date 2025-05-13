@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import './Contact.css'; // Import the custom CSS file
 import MagnetButton from './MagnetButton';
 import bg5 from "../../assets/bg5.png"
+import { customEase } from '../../Easings/customEase';
 
 function Contact() {
 
@@ -13,7 +14,7 @@ function Contact() {
             viewport={{ once: true }}
             transition={{
                 duration: 1.5,
-                ease: [0.87, 0, 0.13, 1],
+                ease: customEase,
             }}
             id="ContactSection">
 

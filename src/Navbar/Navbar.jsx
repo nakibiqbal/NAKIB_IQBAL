@@ -1,32 +1,16 @@
-import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import { useScramble } from "use-scramble";
 import edit2 from "../assets/edit2.jpg";
 import "./Navbar.css";
 import Items from "./Items";
+import useScreenSize from "../hooks/ScreenSizeHook/useScreenSize";
+import { customEase } from "../Easings/customEase";
+import useStateHook from "../hooks/CustomStateHook/useStateHook";
 
 const Navbar = () => {
 
-    const [isClick, setIsClick] = useState(false);
-
-
-    // For small screen size
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1538);
-
-    // Update state on screen resize
-    useEffect(() => {
-        const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 1538);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        // Cleanup listener on unmount
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+    // const [isClick, setIsClick] = useState(false);
+    const { isClick, setIsClick } = useStateHook()
+    const isSmallScreen = useScreenSize(1538);
 
     return (
         <>
@@ -40,12 +24,11 @@ const Navbar = () => {
                         transition={{
                             duration: 1,
                             delay: isClick ? 0 : 1,
-                            ease: [0.87, 0, 0.13, 1]
+                            ease: customEase
                         }}
                         onClick={() => setIsClick(!isClick)}>MENU</motion.button>
 
                     <div
-                        // onClick={() => setIsClick(false)} // Close the menu when clicking outside
                         className="parentNavItem"
                         style={{
                             background: isClick ? "rgb(0 0 0 / 70%)" : "transparent",
@@ -73,7 +56,7 @@ const Navbar = () => {
                             transition={{
                                 duration: 1,
                                 delay: isClick ? 0 : 1,
-                                ease: [0.87, 0, 0.13, 1]
+                                ease: customEase
                             }}
                             className="navItem">
 
@@ -93,13 +76,13 @@ const Navbar = () => {
                                             animate={{
                                                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)", filter: "blur(0px) grayscale(0)", transition: {
                                                     delay: 1, duration: 1,
-                                                    ease: [0.87, 0, 0.13, 1],
+                                                    ease: customEase,
                                                 }
                                             }} // Appear from bottom to top
                                             exit={{
                                                 clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", filter: "blur(20px) grayscale(1)", transition: {
                                                     delay: 0, duration: 1,
-                                                    ease: [0.87, 0, 0.13, 1],
+                                                    ease: customEase,
                                                 }
                                             }} // Hide from top to bottom
                                         />

@@ -1,47 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { motion, useScroll, useTransform } from "framer-motion"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Section6.css";
 import bg6 from "../../assets/bg6.png"
+import useScreenSize from "../../hooks/ScreenSizeHook/useScreenSize";
+import useStateHook from "../../hooks/CustomStateHook/useStateHook";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section6 = () => {
-  const [hoveredCardId, setHoveredCardId] = useState(null);
-  const [shadowPos, setShadowPos] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e, cardId) => {
-    const cardElement = e.currentTarget;
-    const { left, top, width, height } = cardElement.getBoundingClientRect();
-
-    // Get cursor position relative to the center of the card
-    const centerX = width / 2;
-    const centerY = height / 2;
-    const x = e.clientX - left - centerX;
-    const y = e.clientY - top - centerY;
-
-    // Calculate tilt
-    const tiltX = (y / centerY) * 30;
-    const tiltY = (x / centerX) * -30;
-
-    cardElement.style.transform = `perspective(1000px) rotateY(${tiltY}deg) rotateX(${tiltX}deg)`
-
-    // Calculate cursor position relative to the card's center
-    const posX = e.clientX - left;
-    const posY = e.clientY - top;
-
-    setShadowPos({ x: posX, y: posY });
-    setHoveredCardId(cardId);
-
-  };
-
-  const handleMouseLeave = (e) => {
-    const cardElement = e.currentTarget;
-    cardElement.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`
-    setHoveredCardId(null);
-  };
-
 
 
   const cardData = [
@@ -76,22 +44,8 @@ const Section6 = () => {
     },
   ];
 
-  // For small screen size
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 983);
-
-  // Update state on screen resize
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 983);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { hoveredCardId, shadowPos, handleMouseMove, handleMouseLeave } = useStateHook();
+  const isSmallScreen = useScreenSize(983)
 
   const secRef = useRef(null)
   const { scrollYProgress } = useScroll({

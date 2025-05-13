@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import "./images.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { Data } from "./data";
+import useScreenSize from "../../hooks/ScreenSizeHook/useScreenSize";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,24 +22,7 @@ export default function Images() {
 
 const ScrollFunction = ({ index, src, className }) => {
     const childRef = useRef(null);
-
-    // For small screen size
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 500);
-
-    // Update state on screen resize
-    useEffect(() => {
-        const handleResize = () => {
-            setIsSmallScreen(window.innerWidth <= 500);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        // Cleanup listener on unmount
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+    const isSmallScreen = useScreenSize(500);
 
     useGSAP(
         () => {

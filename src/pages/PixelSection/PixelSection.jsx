@@ -2,10 +2,10 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./PixelSection.css";
 import PixelContent from "./PixelContent";
-import useCustomHook from "../../hooks/CustomHook/useCustomHook";
+import useStateHook from "../../hooks/CustomStateHook/useStateHook";
 
 const PixelSection = () => {
-  const { boxCount } = useCustomHook();
+  const { boxCount } = useStateHook();
   const mainRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: mainRef,
